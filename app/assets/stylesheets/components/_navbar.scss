@@ -1,12 +1,19 @@
 .navbar-lewagon {
   justify-content: space-between;
   background: white;
+  font-family: 'Playfair Display', serif;
 }
+
 
 .navbar-lewagon .navbar-collapse {
   flex-grow: 0;
 }
 
 .navbar-lewagon .navbar-brand img {
-  width: 40px;
+  width: 230px;
+}
+
+.fas.fa-poo {
+  color: red;
+  font-size: 30px;
 }
