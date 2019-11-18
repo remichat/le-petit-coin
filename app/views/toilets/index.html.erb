@@ -47,3 +47,14 @@
     </div>
   </div>
 </div>
+
+<h1>les toilettes</h1>
+
+<ul>
+  <% @toilets.each do |toilet| %>
+  <li><%= toilet.title %></li>
+  <% end %>
+</ul>
+
+
+<%= link_to "Add chiotte", new_toilet_path %>

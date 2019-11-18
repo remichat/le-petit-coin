@@ -1,0 +1,13 @@
+<h1>Add chiotte</h1>
+
+<%= simple_form_for @toilet do |f| %>
+  <%= f.input :title %>
+  <%= f.input :description %>
+  <%= f.input :address %>
+  <%= f.input :toilet_type %>
+  <%= f.input :capacity %>
+  <%= f.input :gender %>
+  <%= f.input :is_noiseproof %>
+  <%= f.input :is_pro %>
+  <%= f.submit %>
+<% end %>
