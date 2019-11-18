@@ -9,5 +9,6 @@
   <%= f.input :gender %>
   <%= f.input :is_noiseproof %>
   <%= f.input :is_pro %>
+  <%= f.input :photo, as: :file, input_html: { multiple: true } %>
   <%= f.submit %>
 <% end %>
