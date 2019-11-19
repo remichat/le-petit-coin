@@ -7,6 +7,10 @@ class ToiletsController < ApplicationController
     @toilet = Toilet.new
   end
 
+  def show
+    @toilet = Toilet.find(params[:id])
+  end
+
   def create
     @toilet = Toilet.new(toilet_params)
     @toilet.user = current_user
