@@ -13,6 +13,15 @@
       </div class="row pt-4">
         <p><%= @toilet.description %></p>
       </div>
-    <div class="col-4">todo form</div>
+    <div class="col-4">
+        <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
+      <h2>Choississez précisément l'heure de votre commission</h2>
+      <%= simple_form_for :search, method: "get" do |f| %>
+        <%= f.input :starts_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.input :ends_at, as: :string, required: false, input_html: {class: "datepicker"} %>
+        <%= f.button :submit, "Go", class: "btn btn-primary" %>
+    <% end %>
+  </div>
+    </div>
   </div>
 </div>
