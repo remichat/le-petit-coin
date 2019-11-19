@@ -4,15 +4,27 @@
     <div class="col-6 offset-3">
       <h3>Tell us more about your toilet</h3>
       <%= simple_form_for @toilet do |f| %>
-        <%= f.input :toilet_type, label: "De quel type de toilet s'agit il ?", collection: Toilet::TOILET_TYPES %>
-        <%= f.input :capacity, label: "Combien de personnes peut il accueillir ?",collection: (1..10).to_a %>
-        <%= f.input :gender, label: "Votre toilet est il plus adapté à un sexe particulier ?", collection: Toilet::GENDERS %>
-        <%= f.input :is_noiseproof %>
-        <%= f.input :is_pro %>
-        <%= f.input :title %>
-        <%= f.input :description %>
-        <%= f.input :address, label: "A quelle addresse se trouve " %>
-        <%= f.submit %>
+        <%= f.input :toilet_type,
+                    as: :radio_buttons,
+                    label: "De quel type de toilet s'agit il ?",
+                    collection: Toilet::TOILET_TYPES,
+                    wrapper: :vertical_collection_inline %>
+
+        <%= f.input :capacity,
+                    label: "Combien de personnes peut il accueillir ?",
+                    collection: (1..10).to_a %>
+        <%= f.input :gender,
+                    as: :radio_buttons,
+                    label: "Votre toilet est il plus adapté à un sexe particulier ?",
+                    collection: Toilet::GENDERS,
+                    wrapper: :vertical_collection_inline %>
+        <%= f.label "Selectionnez les options" %>
+        <div class="options-picker">
+          <%= f.input :is_noiseproof, label: "Mon toilet est insonorisé" %>
+          <%= f.input :is_pro , label: "Ceci est un toilet professionel" %>
+        </div>
+
+        <%= f.submit "Next", class: "btn btn-primary" %>
       <% end %>
     </div>
   </div>

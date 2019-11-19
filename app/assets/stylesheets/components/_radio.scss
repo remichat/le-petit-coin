@@ -1,0 +1,52 @@
+.form-check-inline>input {
+  display: none;
+}
+
+
+[type="radio"] + label {
+  border: 1px solid $gray;
+  color: $gray;
+  padding: 5px 15px;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+}
+
+[type="radio"]:checked + label {
+  border: 1px solid $blue-caca;
+  color: $blue-caca;
+}
+
+fieldset.radio_buttons {
+}
+
+
+
+.form-check>input {
+  display: none;
+}
+
+.form-check {
+  // padding: 0;
+}
+
+
+.options-picker {
+  margin-left: 10px;
+  border-left: 3px solid $gray;
+}
+
+
+[type="checkbox"] + label {
+  border: 1px solid $gray;
+  color: $gray;
+  padding: 5px 15px;
+  border-radius: $border-radius;
+  cursor: pointer;
+
+}
+
+[type="checkbox"]:checked + label {
+  border: 1px solid $blue-caca;
+  color: $blue-caca;
+}
