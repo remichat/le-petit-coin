@@ -1,10 +1,35 @@
-<h1>les toilettes</h1>
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/127726/pexels-photo-127726.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
+  <div class="container">
+    <h1>Spread the <strong>💩</strong> around you!</h1>
+    <p><span id="banner-typed-text"></span></p>
+    <%= link_to 'Flush up', "#list-index", class: "btn btn-flat"  %>
+  </div>
+</div>
 
-<ul>
-  <% @toilets.each do |toilet| %>
-  <li><%= toilet.title %></li>
-  <% end %>
-</ul>
+<div class="container">
+
+  <h3 id="list-index">Trouvez votre Ptit Coin</h3>
+
+  <div class="grid-cards">
+    <% @toilets.each do |toilet| %>
+      <%= link_to toilet_path(toilet) do %>
+        <div class="card-trip">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/French_Squatter_Toilet.jpg" />
+          <%#= cl_image_tag toilet.photo.key %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= toilet.title %></h2>
+              <p><%=toilet.description%></p>
+            </div>
+            <h2><%= toilet.gender %></h2>
+            <img src="https://avatars0.githubusercontent.com/u/54526334?v=4" class="card-trip-user avatar-bordered" />
+            <%#= cl_image_tag user.photo.key, class: 'card-trip-user avatar-bordered' %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
+</div>
 
 
-<%= link_to "Add chiotte", new_toilet_path %>
+
