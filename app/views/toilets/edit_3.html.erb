@@ -1,0 +1,26 @@
+
+
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h3>Final step and you'll get rich in no-time !</h3>
+      <%= simple_form_for @toilet do |f| %>
+        <%= f.input :title,
+                    label: "Quel titre voulez vous donner à votre toilet ?",
+                    placeholder: "Trone de fer ..."%>
+        <%= f.input :description,
+                    label: "Décrivez ses principales caractéristique",
+                    placeholder: "Très joli cabinet dans immeuble de haut standing ..."%>
+        <%= f.input :address,
+                    label: "A quelle addresse se trouve ce toilet ?",
+                    placeholder: "80 rue Curial, 75019 Paris ..."%>
+        <div class="text-right">
+          <%= f.submit "Add my toilet", class: "btn btn-primary" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<small>Tell me your favorite toilet, I'll tell you who you are. - <em>Winston Churchill</em></small>
