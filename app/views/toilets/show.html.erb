@@ -3,17 +3,16 @@
   </div>
 </div>
 
-
-<div class="toilet_body flex">
-  <div class="toilet_detail">
-    <div class="toilet_detail_top flex">
-      <div class="title"></div>
-      <div class="avatar_big"></div>
-    </div>
-    <div class="description">
-    </div>
-  </div>
-
-  <div class="booking_form">
+<div class="container">
+  <div class="row p-4">
+    <div class="col-8">
+      <div class="d-flex justify-content-between">
+        <h1><%= @toilet.title %></h1>
+        <div><%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %></div>
+        <%= @toilet.user.first_name %>
+      </div class="row pt-4">
+        <p><%= @toilet.description %></p>
+      </div>
+    <div class="col-4">todo form</div>
   </div>
 </div>
