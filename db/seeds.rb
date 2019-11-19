@@ -9,8 +9,8 @@ user1 = {
   phone_number: "0612345678",
   address: "Narnii Rd, Ulaanbaatar, Mongolie",
   email: "ca@binet.com",
-  password: "valid_password",
-  password_confirmation: "valid_password"
+  password: "azertyu",
+  password_confirmation: "azertyu"
 }
 
 user1 = User.new(user1)
@@ -24,8 +24,8 @@ user2 = {
   phone_number: "0609090807",
   address: "Red Square, Moscow, Russie, 109012",
   email: "alexei@petrovite.com",
-  password: "valid_password",
-  password_confirmation: "valid_password"
+  password: "azertyu",
+  password_confirmation: "azertyu"
 }
 user2 = User.new(user2)
 user2pic = URI.open('https://i.ytimg.com/vi/7fmblNEc-pk/maxresdefault.jpg')
@@ -38,8 +38,8 @@ user3 = {
   phone_number: "0687878787",
   address: "Le Royaume",
   email: "caca@mou.com",
-  password: "valid_password",
-  password_confirmation: "valid_password"
+  password: "azertyu",
+  password_confirmation: "azertyu"
 }
 user3 = User.new(user3)
 user3pic = URI.open('https://nsr911.com/wp-content/uploads/2017/06/hide-the-pain-harold.jpg')
