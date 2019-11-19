@@ -10,19 +10,16 @@ class BookingsController < ApplicationController
 
   def create
     @booking = Booking.new(booking_params)
+    @booking.user = current_user
     @toilet = Toilet.find(params[:toilet_id])
     @booking.toilet = @toilet
-    # if
-    @toilet.save
-    # redirect_to toilet_path(@toilet)
-    # else
-    #   render :new
-    # end
+    @booking.save
+    redirect_to bookings_path(@toilet)
   end
 
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date, :status)
+    params.require(:booking).permit(:start_date, :end_date)
   end
 end
