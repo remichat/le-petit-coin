@@ -1,13 +1,22 @@
-<h1>Add chiotte</h1>
 
-<%= simple_form_for @toilet do |f| %>
-  <%= f.input :title %>
-  <%= f.input :description %>
-  <%= f.input :address %>
-  <%= f.input :toilet_type %>
-  <%= f.input :capacity %>
-  <%= f.input :gender %>
-  <%= f.input :is_noiseproof %>
-  <%= f.input :is_pro %>
-  <%= f.submit %>
-<% end %>
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h3>Tell us more about your toilet</h3>
+      <%= simple_form_for @toilet do |f| %>
+        <%= f.input :toilet_type, label: "De quel type de toilet s'agit il ?", collection: Toilet::TOILET_TYPES %>
+        <%= f.input :capacity, label: "Combien de personnes peut il accueillir ?",collection: (1..10).to_a %>
+        <%= f.input :gender, label: "Votre toilet est il plus adapté à un sexe particulier ?", collection: Toilet::GENDERS %>
+        <%= f.input :is_noiseproof %>
+        <%= f.input :is_pro %>
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.input :address, label: "A quelle addresse se trouve " %>
+        <%= f.submit %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<small>Tell me your favorite toilet, I'll tell you who you are. - <em>Winston Churchill</em></small>
