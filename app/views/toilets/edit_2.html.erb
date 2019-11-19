@@ -1,0 +1,18 @@
+
+<div class="container">
+  <div class="row">
+    <div class="col-6 offset-3">
+      <h3>Just some more information and we are finsihed ...</h3>
+      <%= simple_form_for @toilet do |f| %>
+
+        <%= f.input :title %>
+        <%= f.input :description %>
+        <%= f.input :address, label: "A quelle addresse se trouve " %>
+        <%= f.submit "Add my toilet", class: "btn btn-primary" %>
+      <% end %>
+    </div>
+  </div>
+</div>
+
+
+<small>Tell me your favorite toilet, I'll tell you who you are. - <em>Winston Churchill</em></small>
