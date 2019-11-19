@@ -42,7 +42,27 @@
 
 .grid-cards{
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 5px;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1em;
+  flex-grow: 1;
   margin-bottom: 50px;
+  margin: 10px;
+}
+
+@media (max-width: 991px) {
+  .grid-cards{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .grid-cards{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .grid-cards{
+    grid-template-columns: 1fr;
+  }
 }
