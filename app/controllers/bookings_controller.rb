@@ -14,7 +14,7 @@ class BookingsController < ApplicationController
     @toilet = Toilet.find(params[:toilet_id])
     @booking.toilet = @toilet
     @booking.save
-    redirect_to bookings_path(@toilet)
+    redirect_to bookings_path
   end
 
   private
