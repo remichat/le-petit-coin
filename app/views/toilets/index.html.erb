@@ -2,7 +2,7 @@
   <div class="container">
     <h1>Spread the <strong>💩</strong> around you!</h1>
     <p><span id="banner-typed-text"></span></p>
-    <a class="btn btn-flat" href="#list-index">Flush up</a>
+    <%= link_to 'Flush up', "#list-index", class: "btn btn-flat"  %>
   </div>
 </div>
 
@@ -12,19 +12,21 @@
 
   <div class="grid-cards">
     <% @toilets.each do |toilet| %>
-      <div class="card-trip">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/French_Squatter_Toilet.jpg" />
-        <%#= cl_image_tag toilet.photo.key %>
-        <div class="card-trip-infos">
-          <div>
-            <h2><%= toilet.title %></h2>
-            <p><%=toilet.description%></p>
+      <%= link_to toilet_path(toilet) do %>
+        <div class="card-trip">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/French_Squatter_Toilet.jpg" />
+          <%#= cl_image_tag toilet.photo.key %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= toilet.title %></h2>
+              <p><%=toilet.description%></p>
+            </div>
+            <h2><%= toilet.gender %></h2>
+            <img src="https://avatars0.githubusercontent.com/u/54526334?v=4" class="card-trip-user avatar-bordered" />
+            <%#= cl_image_tag user.photo.key, class: 'card-trip-user avatar-bordered' %>
           </div>
-          <h2><%= toilet.gender %></h2>
-          <img src="https://avatars0.githubusercontent.com/u/54526334?v=4" class="card-trip-user avatar-bordered" />
-          <%#= cl_image_tag user.photo.key, class: 'card-trip-user avatar-bordered' %>
         </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>
