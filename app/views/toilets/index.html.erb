@@ -2,56 +2,31 @@
   <div class="container">
     <h1>Spread the <strong>💩</strong> around you!</h1>
     <p><span id="banner-typed-text"></span></p>
-    <a class="btn btn-flat" href="#">Flush up</a>
+    <%= link_to 'Flush up', "#list-index", class: "btn btn-flat"  %>
   </div>
 </div>
 
 <div class="container">
-  <h3>Explore Le Ptit Coin</h3>
+
+  <h3 id="list-index">Trouvez votre Ptit Coin</h3>
 
   <div class="grid-cards">
-    <div class="card-trip">
-      <img src="https://images.pexels.com/photos/1682346/pexels-photo-1682346.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Toilette verte</h2>
-          <p>Pour une expérience unique en pleine nature.</p>
+    <% @toilets.each do |toilet| %>
+      <%= link_to toilet_path(toilet) do %>
+        <div class="card-trip">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/French_Squatter_Toilet.jpg" />
+          <%#= cl_image_tag toilet.photo.key %>
+          <div class="card-trip-infos">
+            <div>
+              <h2><%= toilet.title %></h2>
+              <p><%=toilet.description%></p>
+            </div>
+            <h2><%= toilet.gender %></h2>
+            <img src="https://avatars0.githubusercontent.com/u/54526334?v=4" class="card-trip-user avatar-bordered" />
+            <%#= cl_image_tag user.photo.key, class: 'card-trip-user avatar-bordered' %>
+          </div>
         </div>
-        <h2 class="card-trip-pricing">0.99€/min</h2>
-        <img src="https://avatars1.githubusercontent.com/u/55274273?v=4" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-
-    <div class="card-trip">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/French_Squatter_Toilet.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Pour un confort minimal</h2>
-          <p>Toilettes à la turque pas tout le temps propre.</p>
-        </div>
-        <h2 class="card-trip-pricing">0.12€/min</h2>
-        <img src="https://avatars0.githubusercontent.com/u/54526334?v=4" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
-
-    <div class="card-trip">
-      <img src="https://i.pinimg.com/originals/71/de/47/71de47db0d1c9c76643857ddab30883c.jpg" />
-      <div class="card-trip-infos">
-        <div>
-          <h2>Toilettes de luxe 💎</h2>
-          <p>Mettez des paillettes dans votre vie !</p>
-        </div>
-        <h2 class="card-trip-pricing">20€/min</h2>
-        <img src="https://avatars0.githubusercontent.com/u/54620502?v=4" class="card-trip-user avatar-bordered" />
-      </div>
-    </div>
+      <% end %>
+    <% end %>
   </div>
 </div>
-
-<h1>les toilettes</h1>
-
-<ul>
-  <% @toilets.each do |toilet| %>
-  <li><%= toilet.title %></li>
-  <% end %>
-</ul>
