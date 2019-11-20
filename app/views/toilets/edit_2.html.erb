@@ -2,20 +2,20 @@
 <div class="container">
   <div class="row">
     <div class="col-6 offset-3">
-      <h3>Just some more information ...</h3>
+      <h3>Quelques informations supplémentaires...</h3>
       <%= simple_form_for @toilet do |f| %>
         <%= f.input :capacity,
-                    label: "Combien de personnes peut il accueillir ?",
+                    label: "Combien de personnes peuvent-elles accueillir ?",
                     as: :radio_buttons,
                     wrapper: :vertical_collection_inline,
                     collection: (1..4).to_a %>
         <%= f.label "Selectionnez les options", class: "label-grey" %>
         <div class="options-picker">
-          <%= f.input :is_noiseproof, label: "Mon toilet est insonorisé" %>
-          <%= f.input :is_pro , label: "Ceci est un toilet professionel" %>
+          <%= f.input :is_noiseproof, label: "Mes toilettes sont insonorisées" %>
+          <%= f.input :is_pro , label: "Il s'agit de toilettes chez un professionel" %>
         </div>
         <div class="text-right">
-          <%= f.submit "Next", class: "btn btn-primary" %>
+          <%= f.submit "Suivant", class: "btn btn-primary" %>
         </div>
       <% end %>
     </div>

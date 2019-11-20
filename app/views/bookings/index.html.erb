@@ -1,5 +1,5 @@
 <div class="container">
-<h1>Bookings to come</h1>
+<h1>Bookings à venir</h1>
 <% @bookings.each do |booking| %>
   <div class ="card-product">
   <%= cl_image_tag(booking.toilet.photo.key, width: 400, height: 300, crop: :fill) %>

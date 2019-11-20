@@ -2,21 +2,21 @@
 <div class="container">
   <div class="row">
     <div class="col-4 offset-4">
-      <h3>Tell us more about your toilet</h3>
+      <h3>Dites-nous en plus sur vos toilettes</h3>
       <%= simple_form_for @toilet do |f| %>
         <%= f.input :toilet_type,
                     as: :radio_buttons,
-                    label: "De quel type de toilet s'agit il ?",
+                    label: "De quel type de toilettes s'agit il ?",
                     collection: Toilet::TOILET_TYPES,
                     wrapper: :vertical_collection_inline %>
         <%= f.input :gender,
                     as: :radio_buttons,
-                    label: "Est il plus adapté à un sexe particulier ?",
+                    label: "Sont-elles adaptées à un sexe particulier ?",
                     collection: Toilet::GENDERS,
                     wrapper: :vertical_collection_inline %>
 
         <div class="text-right">
-          <%= f.submit "Next", class: "btn btn-primary" %>
+          <%= f.submit "Suivant", class: "btn btn-primary" %>
         </div>
       <% end %>
     </div>
