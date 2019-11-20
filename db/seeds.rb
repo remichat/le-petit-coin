@@ -55,7 +55,11 @@ puts "Users created !"
 
 chiure_decolo = {
   title: "Chiure d'écolo",
-  description: "Les meilleures chiottes pour ceux qui bouffent des veggies! Tout ce qui entre là-dedans est transformé en composte.",
+  description: "Les meilleures chiottes pour ceux qui ont un potager! Tout ce qui entre là-dedans est transformé en composte.
+
+  Si vous êtes ce genre de salopard capitaliste mais que votre conscience de hypster-bobo s'éveille récemment, ces toilettes sont faites pour vous!
+
+  Il est grand temps de réduire l'empreinte carbone dégueulasse que vous devez à votre indécente consommation de barbaque.",
   address: "88 rue des rosiers, 92500 Rueil Malmaison",
   toilet_type: "Sèche",
   capacity: 1,
@@ -70,8 +74,13 @@ chiure_decolo.photo.attach(io: chiurepic, filename: 'chiure-image', content_type
 chiure_decolo.save!
 
 bagne_turc = {
-  title: "Bagne Turc",
-  description: "Avez-vous déjà expérimenté les prisons turques ? Quoiqu'il en soit vous serez dissuadés en sortant de cette expérience.",
+  title: "Le Bagne Turc",
+  description: "Avez-vous déjà expérimenté les prisons turques ? Vous en serez probablement dissuadés en sortant de cette expérience.
+  Les vétérans de ces toilettes vous recommanderont d'emporter un surin avec vous.
+
+  La légende parle d'u type ayant attrapé le sida en squattant trop bas et touchant la cuvette.
+
+  En revanche pour ce qui est du nom, les anglophones appellent ça des 'French squatting toilets', je vous suggère de ranger vos clichés sur la Turquie dorénavant.",
   address: "KFC Paris Les Halles, 31 Bd Sebastopol, 75001 Paris",
   toilet_type: "Turc",
   capacity: 12,
@@ -86,8 +95,12 @@ bagne_turc.photo.attach(io: bagnepic, filename: 'bagne-image', content_type: 'im
 bagne_turc.save!
 
 paillettes = {
-  title: "Plus de paillettes dans la vie",
-  description: "Paraît-il que c'est sur ce trône qu'Inès Reg a eu l'inspiration de la dite punchline... Envie de savoir pourquoi ? Essayez-les !",
+  title: "Des paillettes dans ma vie",
+  description: "Paraît-il que c'est sur ce trône qu'Inès Reg a eu l'inspiration de la dite punchline.
+
+  Comme quoi faire le buzz, ça n'a pas de secret : il suffit juste de s'accorder des moments de réfléxion sur des chiottes qui déchirent!
+
+  Libre à vous de considérer si ça vaut la peine d'investir massivement dans des chiottes indécentes pour y avoir des moments de réflexion intenses et déboucher sur des idées de merde.",
   address: "53 Boulevard Murat, 75016 Paris",
   toilet_type: "Pot",
   capacity: 2,
@@ -103,7 +116,11 @@ paillettes.save!
 
 japonaise = {
   title: "詰まったトイレ",
-  description: "Ce bijou pourra même vous indiquer le poids de votre git push. Allez-y, asseyez-vous, fermez les yeux et laissez-vous transporter au Nihon-koku.",
+  description: " Vous avez abusé des gyozas hier soir ?
+
+  Ce bijou vous indiquera même le poids de votre git push. Allez-y, asseyez-vous, fermez les yeux et laissez-vous transporter au Nihon-koku.
+
+  Et on dit merci qui ? Merci Jacquie & -euh non c'est peut-être parti un peu trop loin.",
   address: "37 rue Saint-Anne, 75001 Paris",
   toilet_type: "Pot",
   capacity: 1,
@@ -118,9 +135,13 @@ japonaise.photo.attach(io: japonaisepic, filename: 'japonaise-image', content_ty
 japonaise.save!
 
 underwater = {
-  title: "Toilettes du Titanic",
-  description: "Snorkeling vous dîtes ?",
-  address: "Yet to be determined.",
+  title: "Les Toilettes du Titanic",
+  description: "Vous êtes-vous déjà senti l'âme d'un romantique et pris d'une envie de revivre les derniers instants du Titanic ?
+
+  Personellement chez le Ptit Coin, pas du tout. Mais bon, nous ne sommes pas là pour émettre des jugements de valeur sur vos délires.
+
+  Quoiqu'il en soit, si vous êtes en pleine sortie plongée à la con lors de vos vacances à Bali et qu'une envie pressante vous prend, vous savez où vous rendre.",
+  address: "A côté du shipwreck datant de la seconde Guerre Mondiale, Amed, Bali.",
   toilet_type: "Pot",
   capacity: 500,
   gender: "Mixte",
@@ -136,7 +157,8 @@ underwater.save!
 10.times do
   toilet = {
     title: "Lorem Ipsum",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit.",
+    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus ex adipisci, atque! Sunt mollitia facere, assumenda ex sequi, perspiciatis reiciendis repellendus consectetur nobis nihil expedita perferendis dolores incidunt quibusdam minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, fugit, quos. Necessitatibus, vel, velit! Ducimus saepe aliquid maiores id magnam inventore laudantium ipsam recusandae amet eaque, at nostrum labore velit.
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus ex adipisci, atque! Sunt mollitia facere, assumenda ex sequi, perspiciatis reiciendis repellendus consectetur nobis nihil expedita perferendis dolores incidunt quibusdam minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, fugit, quos. Necessitatibus, vel, velit! Ducimus saepe aliquid maiores id magnam inventore laudantium ipsam recusandae amet eaque, at nostrum labore velit.",
     address:"#{Faker::Address.street_address}, #{Faker::Address.city}",
     toilet_type: Toilet::TOILET_TYPES.sample,
     capacity: rand(1..3),
