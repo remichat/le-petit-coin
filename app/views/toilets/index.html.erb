@@ -21,7 +21,7 @@
               <h2><%= toilet.title %></h2>
               <p><%= toilet.description %></p>
             </div>
-            <h2><%= toilet.gender %></h2>
+            <h2><span class="blue-caca gender-index"><%= Toilet::GENDERS_ICONS[toilet.gender] %></span></h2>
             <!-- <img src="https://avatars0.githubusercontent.com/u/54526334?v=4" class="card-trip-user avatar-bordered" /> -->
             <%= cl_image_tag toilet.user.photo.key, class: 'card-trip-user avatar-bordered' %>
           </div>
