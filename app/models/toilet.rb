@@ -1,5 +1,10 @@
 class Toilet < ApplicationRecord
   GENDERS = %w[Homme Femme Mixte]
+  GENDERS_ICONS = {
+    "Homme" => "<i class='fas fa-mars'></i>".html_safe,
+    "Femme" => "<i class='fas fa-venus'></i>".html_safe,
+    "Mixte" => "<i class='fas fa-venus'></i><i class='fas fa-mars'></i>".html_safe
+  }
   TOILET_TYPES = %w[Turc Sèche Pot]
   belongs_to :user
   has_many :bookings, dependent: :destroy
