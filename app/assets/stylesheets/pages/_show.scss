@@ -8,3 +8,38 @@
   width: 70%;
 
 }
+
+
+.toilet-main-infos {
+
+  & .title-toilet {
+  font-size: 32px;
+  font-size: bold;
+  }
+
+  & i {
+    color: $blue-caca;
+    font-size: 24px;
+  }
+
+  & ul {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 5px;
+  }
+
+  & ul>li {
+    color: $mid-gray;
+    font-size: 14px;
+  }
+
+  & .feature-info {
+    font-weight: bold;
+
+    & i {
+      font-size: 14px;
+    }
+  }
+}
+
+

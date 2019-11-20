@@ -1,0 +1,9 @@
+<h1>Bookings to come</h1>
+<% @bookings.each do |booking| %>
+<p><%= cl_image_tag(booking.toilet.photo.key, width: 400, height: 300, crop: :fill) %></p>
+<p><%= booking.toilet.title %></p>
+<p><%= booking.toilet.description %></p>
+<p><%= booking.start_date %></p>
+<p><%= booking.end_date %></p>
+<p></p>
+<% end %>
