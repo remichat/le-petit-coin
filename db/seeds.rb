@@ -1,8 +1,11 @@
 require 'faker'
 require 'open-uri'
+
+puts "destroying models instances..."
 Toilet.destroy_all
 User.destroy_all
 
+puts "creating models instances..."
 user1 = {
   first_name: "Khâ",
   last_name: "Bhï-Nęt",
@@ -28,7 +31,7 @@ user2 = {
   password_confirmation: "azertyu"
 }
 user2 = User.new(user2)
-user2pic = URI.open('https://i.ytimg.com/vi/7fmblNEc-pk/maxresdefault.jpg')
+user2pic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574244761/remi_u6rbv7.png')
 user2.photo.attach(io: user2pic, filename: 'user2-avatar', content_type: 'image/jpg')
 user2.save!
 
@@ -42,11 +45,12 @@ user3 = {
   password_confirmation: "azertyu"
 }
 user3 = User.new(user3)
-user3pic = URI.open('https://nsr911.com/wp-content/uploads/2017/06/hide-the-pain-harold.jpg')
+user3pic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574244761/had_tidvnc.png')
 user3.photo.attach(io: user3pic, filename: 'user3-avatar', content_type: 'image/jpg')
 user3.save!
 
 users = [user1, user2, user3]
+puts "Users created !"
 
 
 chiure_decolo = {
@@ -61,7 +65,7 @@ chiure_decolo = {
   user: users.sample
 }
 chiure_decolo = Toilet.new(chiure_decolo)
-chiurepic = URI.open('https://images.pexels.com/photos/1682346/pexels-photo-1682346.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500')
+chiurepic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243667/nature_cklrxy.jpg')
 chiure_decolo.photo.attach(io: chiurepic, filename: 'chiure-image', content_type: 'image/jpg')
 chiure_decolo.save!
 
@@ -77,7 +81,7 @@ bagne_turc = {
   user: users.sample
 }
 bagne_turc = Toilet.new(bagne_turc)
-bagnepic = URI.open('https://upload.wikimedia.org/wikipedia/commons/9/9e/French_Squatter_Toilet.jpg')
+bagnepic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243668/turc_fwfiha.jpg')
 bagne_turc.photo.attach(io: bagnepic, filename: 'bagne-image', content_type: 'image/jpg')
 bagne_turc.save!
 
@@ -93,7 +97,7 @@ paillettes = {
   user: users.sample
 }
 paillettes = Toilet.new(paillettes)
-paillettespic = URI.open('https://i.pinimg.com/originals/71/de/47/71de47db0d1c9c76643857ddab30883c.jpg')
+paillettespic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243667/diams_r1lzaj.jpg')
 paillettes.photo.attach(io: paillettespic, filename: 'paillettes-image', content_type: 'image/jpg')
 paillettes.save!
 
@@ -109,7 +113,7 @@ japonaise = {
   user: users.sample
 }
 japonaise = Toilet.new(japonaise)
-japonaisepic = URI.open('https://i.ytimg.com/vi/8SakpEVILVQ/hqdefault.jpg')
+japonaisepic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243667/jap_x2bhzk.jpg')
 japonaise.photo.attach(io: japonaisepic, filename: 'japonaise-image', content_type: 'image/jpg')
 japonaise.save!
 
@@ -125,7 +129,7 @@ underwater = {
   user: users.sample
 }
 underwater = Toilet.new(underwater)
-underwaterpic = URI.open('https://thumbs.dreamstime.com/b/water-toilet-underwater-bathroom-wreck-utila-honduras-76658748.jpg')
+underwaterpic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243667/water_ccxkmx.jpg')
 underwater.photo.attach(io: underwaterpic, filename: 'underwater-image', content_type: 'image/jpg')
 underwater.save!
 
@@ -142,7 +146,9 @@ underwater.save!
     user: users.sample
   }
   trone = Toilet.new(toilet)
-  tronepic = URI.open('https://images.unsplash.com/photo-1556228149-d8f523f77b5a?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=668&q=80')
+  tronepic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574244573/toilet_rdyx94.jpg')
   trone.photo.attach(io: tronepic, filename: 'trone-image', content_type: 'image/jpg')
   trone.save!
 end
+
+puts "Seeds done !"
