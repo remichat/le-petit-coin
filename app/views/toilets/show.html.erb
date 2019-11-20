@@ -1,14 +1,32 @@
 
 <div class="container w-80">
-<div class="toilet-cover" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.2)), url(<%= cl_image_path @toilet.photo.key, alt: "alttext" %>);"></div>
   <div class="row p-4">
-    <div class="col-8 pr-5 toilet-main-infos">
-      <div class="d-flex justify-content-between">
+    <div class="col-8 toilet-main-infos">
+      <div class="toilet-cover" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url(<%= cl_image_path @toilet.photo.key, alt: "alttext" %>);">
+        <div class="features">
+          <% if @toilet.is_pro %>
+            <span class="feature-tag">PRO</span>
+          <% end %>
+          <% if @toilet.is_noiseproof %>
+            <span class="feature-tag">NOISE-PROOF</span>
+          <% end %>
+        </div>
+        <div class="stars">
+          <% x = rand(3..5) %>
+          <% (x).times do %>
+            <%= "<i class='fas fa-star'></i>".html_safe %>
+          <% end %>
+          <% (5-x).times do %>
+            <%= "<i class='far fa-star'></i>".html_safe %>
+          <% end %>
+        </div>
+      </div>
+      <div class="d-flex justify-content-between pt-3">
         <div>
           <h1 class="title-toilet"><%= @toilet.title %></h1>
           <p><i class="fas fa-map-marked-alt"></i>  <%= @toilet.address %></p>
         </div>
-        <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
+        <%= cl_image_tag @toilet.user.photo.key, class: "avatar-large", alt: "avatar-large" %>
       </div>
       <div class="d-flex justify-content-between border-bottom">
         <ul class="list-inline">
@@ -22,15 +40,17 @@
       </div>
     </div>
 
-    <div class="col-4 bookingf sticky-top">
+    <div class="col-4">
+      <div class="bookingf">
         <div class="form-wrapper" style="width: 100%; margin: 0 auto;">
           <h2>Choississez précisément l'heure de votre commission</h2>
           <%= simple_form_for [@toilet, @booking] do |f| %>
             <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
             <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-            <%= f.button :submit, "C'est parti !", class: "btn btn-primary" %>
+            <%= f.button :submit, "C'est parti !", class: "btn btn-primary w-100" %>
           <% end %>
         </div>
+      </div>
     </div>
   </div>
 </div>

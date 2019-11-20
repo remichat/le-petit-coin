@@ -14,6 +14,9 @@
     padding: 0;
     margin: 0;
     margin-bottom: 5px;
+    display:flex;
+    width: 75%;
+    justify-content: space-between;
   }
 
   & ul>li {
@@ -27,5 +30,21 @@
     & i {
       font-size: 14px;
     }
+  }
+
+  & .feature-tag {
+    color: white;
+    border-radius: $border-radius;
+    padding: 1px 5px;
+    background-color: $blue-caca;
+    font-weight: bold;
+  }
+
+  & .stars {
+    text-align: left;
+  }
+
+  & .stars>i {
+    color: $yellow;
   }
 }
