@@ -1,0 +1,11 @@
+.form-group > label,
+.label-grey,
+legend {
+  color: $mid-gray;
+  font-weight: bold;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: rgb(190, 190, 190) !important;
+}

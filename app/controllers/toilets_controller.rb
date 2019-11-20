@@ -27,8 +27,10 @@ class ToiletsController < ApplicationController
     @toilet = Toilet.find(params[:id])
     if @toilet.toilet_type.nil?
       render :edit
-    elsif @toilet.title.nil?
+    elsif @toilet.capacity.nil?
       render :edit_2
+    elsif @toilet.title.nil?
+      render :edit_3
     end
   end
 
