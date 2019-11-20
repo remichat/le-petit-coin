@@ -3,7 +3,14 @@
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   width: 350px;
+  height: 290px;
   border-radius: $border-radius-lg;
+    &:hover {
+      cursor: pointer;
+      transition: background-color 0.2s ease-out;
+      background: #F9F9F9;
+      box-shadow: 0 0 15px rgba(0,0,0,0.4);
+    }
 }
 
 .card-trip > img {
@@ -47,7 +54,24 @@
   flex-grow: 1;
   margin-bottom: 50px;
   margin: 10px;
+    a{
+      color: #444D56;
+      text-decoration: none;
+    }
 }
+
+.card-trip-infos {
+  &:hover {
+    color:#212121;
+  }
+  p {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+  }
+}
+
 
 @media (max-width: 991px) {
   .grid-cards{
