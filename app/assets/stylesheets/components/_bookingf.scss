@@ -1,10 +1,11 @@
 .bookingf {
   overflow: hidden;
   background: white;
-  box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  border-radius: $border-radius-lg;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+  border-radius: $border-radius;
+  padding: 15px 15px;
+  position: sticky;
+  top: 107px;
 }
 
 .bookingf h2 {

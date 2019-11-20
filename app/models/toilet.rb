@@ -6,6 +6,7 @@ class Toilet < ApplicationRecord
     "Mixte" => "<i class='fas fa-venus'></i><i class='fas fa-mars'></i>".html_safe
   }
   TOILET_TYPES = %w[Turc Sèche Pot]
+
   belongs_to :user
   has_many :bookings, dependent: :destroy
   has_one_attached :photo

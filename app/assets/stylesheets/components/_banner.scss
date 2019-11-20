@@ -23,8 +23,14 @@
 
 .toilet-cover {
   background-repeat: no-repeat;
-  height: 400px;
+  height: 300px;
   background-size: cover;
   background-position: center;
+  border-radius: $border-radius;
+  text-align: right;
+  padding: 15px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
