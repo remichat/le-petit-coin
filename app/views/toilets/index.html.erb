@@ -1,8 +1,8 @@
 <div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/127726/pexels-photo-127726.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
   <div class="container">
-    <h1>Spread the <strong>💩</strong> around you!</h1>
-    <p><span id="banner-typed-text"></span></p>
-    <%= link_to 'Flush up', "#list-index", class: "btn btn-flat"  %>
+    <h1 data-aos="fade-down" data-aos-duration="5000">Spread the <strong>💩</strong> around you!</h1>
+    <p data-aos="fade-down" data-aos-duration="4000"><span id="banner-typed-text"></span></p>
+    <div data-aos="fade-down" data-aos-duration="3000"><%= link_to 'Flush up', "#list-index", class: "btn btn-flat" %></div>
   </div>
 </div>
 
@@ -13,7 +13,7 @@
   <div class="grid-cards">
     <% @toilets.each do |toilet| %>
       <%= link_to toilet_path(toilet) do %>
-        <div class="card-trip">
+        <div class="card-trip" data-aos="fade-up" data-aos-duration="5000">
           <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/French_Squatter_Toilet.jpg" /> -->
           <%= cl_image_tag toilet.photo.key %>
           <div class="card-trip-infos">
