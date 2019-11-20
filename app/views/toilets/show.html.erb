@@ -7,18 +7,21 @@
   <div class="row p-4">
     <div class="col-8 pr-5">
       <div class="d-flex justify-content-between">
-        <h1><%= @toilet.title %></h1>
-<!--         <div><%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %></div>
- -->    <%= @toilet.user.first_name %>
-      </div class="row pt-4">
-        <p><%= @toilet.address %></p>
-        <div class="d-flex justify-content-between">
-          <p>Type: <%= @toilet.toilet_type %></p>
-          <p>Capacity: <%= @toilet.capacity %></p>
-          <p>Gender: <%= @toilet.gender %></p>
+        <div>
+          <h1><%= @toilet.title %></h1>
+          <p><%= @toilet.address %></p>
         </div>
-        <p><%= @toilet.description %></p>
+        <%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %>
       </div>
+      <div class="d-flex justify-content-between">
+        <ul>
+          <li>Type: <%= @toilet.toilet_type %></li>
+          <li>Capacity: <%= @toilet.capacity %></li>
+          <li>Gender: <%= @toilet.gender %></li>
+        </ul>
+      </div>
+      <p><%= @toilet.description %></p>
+    </div>
 
     <div class="col-4 bookingf sticky-top">
         <div class="form-wrapper" style="width: 100%; margin: 0 auto;">
