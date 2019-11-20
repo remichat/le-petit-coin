@@ -3,25 +3,32 @@
   </div>
 </div>
 
-<div class="container">
+<div class="container w-80">
   <div class="row p-4">
-    <div class="col-8">
+    <div class="col-8 pr-5">
       <div class="d-flex justify-content-between">
         <h1><%= @toilet.title %></h1>
-        <div><%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %></div>
-        <%= @toilet.user.first_name %>
+<!--         <div><%= image_tag "https://kitt.lewagon.com/placeholder/users/arthur-littm", class: "avatar-large", alt: "avatar-large" %></div>
+ -->    <%= @toilet.user.first_name %>
       </div class="row pt-4">
+        <p><%= @toilet.address %></p>
+        <div class="d-flex justify-content-between">
+          <p>Type: <%= @toilet.toilet_type %></p>
+          <p>Capacity: <%= @toilet.capacity %></p>
+          <p>Gender: <%= @toilet.gender %></p>
+        </div>
         <p><%= @toilet.description %></p>
       </div>
-    <div class="col-4">
-        <div class="form-wrapper" style="width: 400px; margin: 0 auto;">
-      <h2>Choississez précisément l'heure de votre commission</h2>
-      <%= simple_form_for [@toilet, @booking] do |f| %>
-        <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-        <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
-        <%= f.button :submit, "Go", class: "btn btn-primary" %>
-      <% end %>
-      </div>
+
+    <div class="col-4 bookingf sticky-top">
+        <div class="form-wrapper" style="width: 100%; margin: 0 auto;">
+          <h2>Choississez précisément l'heure de votre commission</h2>
+          <%= simple_form_for [@toilet, @booking] do |f| %>
+            <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"} %>
+            <%= f.button :submit, "Go", class: "btn btn-primary" %>
+          <% end %>
+        </div>
     </div>
   </div>
 </div>
