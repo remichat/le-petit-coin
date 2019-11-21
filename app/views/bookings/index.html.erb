@@ -1,16 +1,21 @@
 <div class="container">
-<h1>Bookings à venir</h1>
+<p></p>
+<h5>Bookings à venir</h5>
 <% @bookings.each do |booking| %>
   <div class ="card-product">
   <%= cl_image_tag(booking.toilet.photo.key, width: 400, height: 300, crop: :fill) %>
-    <div class="card-product-infos">
-      <p><%= booking.toilet.title %></p>
-      <p>Location : <%= booking.toilet.address %></p>
-    </div>
-    <div class="card-product-dates">
-      <p>From <%= booking.start_date.strftime(" %d/%m/%Y %H:%M ") %></p>
-      <p>To <%= booking.end_date.strftime(" %d/%m/%Y %H:%M ") %></p>
-    </div>
+      <div class="title-address">
+        <p><%= booking.toilet.title %></p>
+        <p>Adresse : <%= booking.toilet.address %></p>
+      </div>
+      <div class="dates">
+        <p>Du <%= booking.start_date.strftime(" %d/%m/%Y %H:%M ") %></p>
+        <p>Au <%= booking.end_date.strftime(" %d/%m/%Y %H:%M ") %></p>
+      </div>
+      <div class="buttons">
+        <%= link_to "Supprimer", booking_path(booking), method: :delete, class: "btn-delete" %>
+        <%= link_to "Contact owner", class: "btn-contact" %>
+      </div>
   </div>
 <% end %>
 </div>
