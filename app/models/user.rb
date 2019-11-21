@@ -11,4 +11,11 @@ class User < ApplicationRecord
   validates :first_name, :last_name, :phone_number, :address, presence: true
   validates :phone_number, uniqueness: true, format: { with: /\d{8,10}/,
     message: "should be a valid phone number modafoka" }
+
+  def number_of_notifications
+    self.bookings.reduce(0) do |memo, booking|
+      increment = booking.is_read ? 1 : 0
+      memo + increment
+    end
+  end
 end
