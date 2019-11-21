@@ -1,23 +1,70 @@
-<div class="container">
-<p></p>
-<h5>Bookings à venir</h5>
-<% @bookings.each do |booking| %>
-  <div class ="card-product">
-  <%= cl_image_tag(booking.toilet.photo.key, width: 400, height: 300, crop: :fill) %>
-      <div class="title-address">
-        <p><strong><%= booking.toilet.title %></strong></p>
-        <div class="address-style">
-          <p><i class="fas fa-map-marked-alt"></i> <%= booking.toilet.address %></p>
+<div class="container container-container">
+  <div class="upcoming-booking-container">
+    <p></p>
+    <h5>Bookings à venir</h5>
+    <% @bookings.each do |booking| %>
+    <% if booking.end_date > Time.now %>
+      <div class ="card-product">
+        <%= cl_image_tag(booking.toilet.photo.key, width: 400, height: 300, crop: :fill) %>
+        <div class="card-content">
+          <div class="title-buttons">
+            <div class="title">
+              <h2><%= booking.toilet.title %></h2>
+            </div>
+            <div class="buttons">
+              <%= link_to booking_path(booking), method: :delete do%>
+                <i class="fa fa-trash" aria-hidden="true"></i>
+              <% end %>
+              <%= link_to do %>
+                <i class="fa fa-phone" aria-hidden="true"></i>
+              <% end %>
+            </div>
+          </div>
+          <div class="address-date">
+            <div class="address">
+              <p><i class="fas fa-map-marked-alt"></i> <%= booking.toilet.address %></p>
+            </div>
+            <div class="date">
+              <p>Le <%= booking.start_date.strftime(" %d/%m/%Y %H:%M ") %></p>
+            </div>
+          </div>
+        </div>
+    </div>
+  <% end %>
+  <% end %>
+  </div>
+  <div class="passed-booking-container">
+    <p></p>
+    <h5>Bookings terminés</h5>
+    <% @bookings.each do |booking| %>
+    <% if booking.end_date < Time.now %>
+      <div class ="card-product">
+      <%= cl_image_tag(booking.toilet.photo.key, width: 400, height: 300, crop: :fill) %>
+      <div class="card-content">
+        <div class="title-buttons">
+          <div class="title">
+            <h2><%= booking.toilet.title %></h2>
+          </div>
+          <div class="buttons">
+            <%= link_to booking_path(booking), method: :delete do%>
+              <i class="far fa-star"></i>
+            <% end %>
+            <%= link_to do %>
+              <i class="fa fa-phone" aria-hidden="true"></i>
+            <% end %>
+            <% end %>
+          </div>
+        </div>
+        <div class="address-date">
+          <div class="address">
+            <p><i class="fas fa-map-marked-alt"></i> <%= booking.toilet.address %></p>
+          </div>
+          <div class="date">
+            <p>Le <%= booking.start_date.strftime(" %d/%m/%Y %H:%M ") %></p>
+          </div>
         </div>
       </div>
-      <div class="dates">
-        <p>Du <%= booking.start_date.strftime(" %d/%m/%Y %H:%M ") %></p>
-        <p>Au <%= booking.end_date.strftime(" %d/%m/%Y %H:%M ") %></p>
-      </div>
-      <div class="buttons">
-        <%= link_to "Supprimer", booking_path(booking), method: :delete, class: "btn-delete" %>
-        <%= link_to "Contact owner", class: "btn-contact" %>
-      </div>
+    </div>
+  <% end %>
   </div>
-<% end %>
 </div>
