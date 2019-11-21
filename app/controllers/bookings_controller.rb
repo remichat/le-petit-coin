@@ -1,6 +1,6 @@
 class BookingsController < ApplicationController
   def index
-    @bookings = Booking.all
+    @bookings = Booking.where(user: current_user)
   end
 
   def new
@@ -14,6 +14,12 @@ class BookingsController < ApplicationController
     @toilet = Toilet.find(params[:toilet_id])
     @booking.toilet = @toilet
     @booking.save
+    redirect_to bookings_path
+  end
+
+  def destroy
+    @booking = Booking.find(params[:id])
+    @booking.destroy
     redirect_to bookings_path
   end
 
