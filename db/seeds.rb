@@ -60,7 +60,7 @@ chiure_decolo = {
   Si vous êtes ce genre de salopard capitaliste mais que votre conscience de hypster-bobo s'éveille récemment, ces toilettes sont faites pour vous!
 
   Il est grand temps de réduire l'empreinte carbone dégueulasse que vous devez à votre indécente consommation de barbaque.",
-  address: "88 rue des rosiers, 92500 Rueil Malmaison",
+  address: "12 rue Crespi du Gast; 75011 Paris",
   toilet_type: "Sèche",
   capacity: 1,
   gender: "Mixte",
@@ -141,7 +141,7 @@ underwater = {
   Personellement chez le Ptit Coin, pas du tout. Mais bon, nous ne sommes pas là pour émettre des jugements de valeur sur vos délires.
 
   Quoiqu'il en soit, si vous êtes en pleine sortie plongée à la con lors de vos vacances à Bali et qu'une envie pressante vous prend, vous savez où vous rendre.",
-  address: "A côté du shipwreck datant de la seconde Guerre Mondiale, Amed, Bali.",
+  address: "Klumpu, Nusapenida, Bali 80771, Indonésie",
   toilet_type: "Pot",
   capacity: 500,
   gender: "Mixte",
