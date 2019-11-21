@@ -3,8 +3,10 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { loadDynamicBannerText } from '../components/banner';
 import { toiletTypeToSelect } from '../components/select';
-import { setDatePicker } from "../plugins/flatpickr"
+import { setDatePicker } from "../plugins/flatpickr";
+import { setNotificationsUpdates } from "../components/badge";
 loadDynamicBannerText();
 toiletTypeToSelect();
 setDatePicker();
 AOS.init();
+setNotificationsUpdates();

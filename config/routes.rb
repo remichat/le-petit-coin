@@ -9,6 +9,7 @@ Rails.application.routes.draw do
 
   patch '/bookings/:id/accept', to: "bookings#accept", as: "accept_booking"
   patch '/bookings/:id/reject', to: "bookings#reject", as: "reject_booking"
+  get '/bookings/:user_id/number_of_notifications', to: "bookings#number_of_notifications_for_user"
 
   namespace :owner do
     resources :bookings, only: :index

@@ -31,6 +31,16 @@ class BookingsController < ApplicationController
     change_status("Rejected")
   end
 
+  def number_of_notifications_for_user
+    user = User.find(params[:user_id])
+    bookings = find_bookings_from_toilet(user.toilets)
+    number = bookings.reduce(0) do |memo, booking|
+      increment = booking.is_read ? 0 : 1
+      memo + increment
+    end
+    render json: { notifications: number }
+  end
+
   private
 
   def booking_params
@@ -42,5 +52,11 @@ class BookingsController < ApplicationController
     @booking.status = new_status
     @booking.save
     redirect_to owner_bookings_path
+  end
+
+  def find_bookings_from_toilet(toilets)
+    bookings = []
+    toilets.each { |toilet| bookings << toilet.bookings }
+    bookings.flatten
   end
 end
