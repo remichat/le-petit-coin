@@ -15,5 +15,5 @@ Rails.application.routes.draw do
     resources :bookings, only: :index
   end
 
-  root to: 'toilets#index'
+  root to: 'pages#home'
 end

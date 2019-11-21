@@ -1,10 +1,8 @@
 require 'faker'
 require 'open-uri'
-
 puts "destroying models instances..."
 Toilet.destroy_all
 User.destroy_all
-
 puts "creating models instances..."
 user1 = {
   first_name: "Khâ",
@@ -15,12 +13,10 @@ user1 = {
   password: "azertyu",
   password_confirmation: "azertyu"
 }
-
 user1 = User.new(user1)
 user1pic = URI.open('https://media.licdn.com/dms/image/C5103AQG0eyey_2tgew/profile-displayphoto-shrink_200_200/0?e=1579737600&v=beta&t=q4LYg3xZWW4u5l4PcxCiUD5lwiDuFr75Mll0ah0nn8M')
 user1.photo.attach(io: user1pic, filename: 'user1-avatar', content_type: 'image/jpg')
 user1.save!
-
 user2 = {
   first_name: "Alexei",
   last_name: "Kipetrovici",
@@ -34,7 +30,6 @@ user2 = User.new(user2)
 user2pic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574244761/remi_u6rbv7.png')
 user2.photo.attach(io: user2pic, filename: 'user2-avatar', content_type: 'image/jpg')
 user2.save!
-
 user3 = {
   first_name: "Albert",
   last_name: "Cacamus",
@@ -50,14 +45,11 @@ user3.photo.attach(io: user3pic, filename: 'user3-avatar', content_type: 'image/
 user3.save!
 
 puts "Users created !"
-
-
 chiure_decolo = {
   title: "Chiure d'écolo",
   description: "Les meilleures chiottes pour ceux qui ont un potager! Tout ce qui entre là-dedans est transformé en compost.
 
   Si vous êtes ce genre de salopard capitaliste mais que votre conscience de hypster-bobo s'éveille récemment, ces toilettes sont faites pour vous!
-
   Il est grand temps de réduire l'empreinte carbone dégueulasse que vous devez à votre indécente consommation de barbaque.",
   address: "12 rue Crespin du Gast, 75011 Paris",
   toilet_type: "Sèche",
@@ -71,7 +63,6 @@ chiure_decolo = Toilet.new(chiure_decolo)
 chiurepic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243667/nature_cklrxy.jpg')
 chiure_decolo.photo.attach(io: chiurepic, filename: 'chiure-image', content_type: 'image/jpg')
 chiure_decolo.save!
-
 bagne_turc = {
   title: "Le Bagne Turc",
   description: "Avez-vous déjà expérimenté les prisons d'Erdogan ? Vous en serez probablement dissuadés en sortant de cette expérience.
@@ -92,13 +83,10 @@ bagne_turc = Toilet.new(bagne_turc)
 bagnepic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243668/turc_fwfiha.jpg')
 bagne_turc.photo.attach(io: bagnepic, filename: 'bagne-image', content_type: 'image/jpg')
 bagne_turc.save!
-
 paillettes = {
   title: "Des paillettes dans ma vie",
   description: "Paraît-il que c'est sur ce trône qu'Inès Reg a eu l'inspiration de la dite punchline.
-
   Comme quoi faire le buzz, ça n'a pas de secret : il suffit juste de s'accorder des moments de réfléxion sur des chiottes qui déchirent!
-
   Libre à vous de considérer si ça vaut la peine d'investir massivement dans des chiottes indécentes pour y avoir des moments de réflexion intenses et déboucher sur des idées de merde.",
   address: "53 Boulevard Murat, 75016 Paris",
   toilet_type: "Pot",
@@ -112,13 +100,10 @@ paillettes = Toilet.new(paillettes)
 paillettespic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243667/diams_r1lzaj.jpg')
 paillettes.photo.attach(io: paillettespic, filename: 'paillettes-image', content_type: 'image/jpg')
 paillettes.save!
-
 japonaise = {
   title: "詰まったトイレ",
   description: " Vous avez abusé des gyozas hier soir ?
-
   Ce bijou vous indiquera même le poids de votre git push. Allez-y, asseyez-vous, fermez les yeux et laissez-vous transporter au Nihon-koku.
-
   Et on dit merci qui ? Merci Jacquie & -euh non c'est peut-être parti un peu trop loin.",
   address: "37 rue Saint-Anne, 75001 Paris",
   toilet_type: "Pot",
@@ -132,13 +117,10 @@ japonaise = Toilet.new(japonaise)
 japonaisepic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243667/jap_x2bhzk.jpg')
 japonaise.photo.attach(io: japonaisepic, filename: 'japonaise-image', content_type: 'image/jpg')
 japonaise.save!
-
 underwater = {
   title: "Les Toilettes du Titanic",
   description: "Vous êtes-vous déjà senti l'âme d'un romantique et pris d'une envie de revivre les derniers instants du Titanic ?
-
   Personellement chez le Ptit Coin, pas du tout. Mais bon, nous ne sommes pas là pour émettre des jugements de valeur sur vos délires.
-
   Quoiqu'il en soit, si vous êtes en pleine sortie plongée à la con lors de vos vacances à Bali et qu'une envie pressante vous prend, vous savez où vous rendre.",
   address: "17 Quai de la Tournelle, 75005 Paris",
   toilet_type: "Pot",
@@ -152,7 +134,6 @@ underwater = Toilet.new(underwater)
 underwaterpic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243667/water_ccxkmx.jpg')
 underwater.photo.attach(io: underwaterpic, filename: 'underwater-image', content_type: 'image/jpg')
 underwater.save!
-
 rave = {
   title: "Détox post-rave",
   description: " Il est 14h vous quittez la rave. Vous n'avez pas encore dormi et réalisez enfin que la soirée vous a emmené à Meaux alors que vous vivez dans une petite banlieue de l'Ouest Parisien.

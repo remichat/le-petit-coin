@@ -1,7 +1,19 @@
 class ToiletsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @toilets = Toilet.all
+    @toilets = Toilet.geocoded
+
+    if params[:query].present?
+      @toilets = @toilets.search_by_address(params[:query])
+    end
+
+    @markers = @toilets.map do |toilet|
+      {
+        lat: toilet.latitude,
+        lng: toilet.longitude,
+        infoWindow: render_to_string(partial: "shared/info_window", locals: { toilet: toilet })
+      }
+    end
   end
 
   def new

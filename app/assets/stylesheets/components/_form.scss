@@ -9,3 +9,13 @@ input::placeholder,
 textarea::placeholder {
   color: rgb(190, 190, 190) !important;
 }
+
+// input address
+.form-control {
+  width: 400px;
+  height: 42px;
+}
+
+.search-form{
+  display: flex;
+}
