@@ -49,13 +49,12 @@ user3pic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v15742447
 user3.photo.attach(io: user3pic, filename: 'user3-avatar', content_type: 'image/jpg')
 user3.save!
 
-users = [user1, user2, user3]
 puts "Users created !"
 
 
 chiure_decolo = {
   title: "Chiure d'écolo",
-  description: "Les meilleures chiottes pour ceux qui ont un potager! Tout ce qui entre là-dedans est transformé en composte.
+  description: "Les meilleures chiottes pour ceux qui ont un potager! Tout ce qui entre là-dedans est transformé en compost.
 
   Si vous êtes ce genre de salopard capitaliste mais que votre conscience de hypster-bobo s'éveille récemment, ces toilettes sont faites pour vous!
 
@@ -66,7 +65,7 @@ chiure_decolo = {
   gender: "Mixte",
   is_noiseproof: true,
   is_pro: false,
-  user: users.sample
+  user: user2
 }
 chiure_decolo = Toilet.new(chiure_decolo)
 chiurepic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243667/nature_cklrxy.jpg')
@@ -75,19 +74,19 @@ chiure_decolo.save!
 
 bagne_turc = {
   title: "Le Bagne Turc",
-  description: "Avez-vous déjà expérimenté les prisons turques ? Vous en serez probablement dissuadés en sortant de cette expérience.
-  Les vétérans de ces toilettes vous recommanderont d'emporter un surin avec vous.
+  description: "Avez-vous déjà expérimenté les prisons d'Erdogan ? Vous en serez probablement dissuadés en sortant de cette expérience.
+  Les habitués vous recommanderont d'emporter un surin avec vous.
 
-  La légende parle d'u type ayant attrapé le sida en squattant trop bas et touchant la cuvette.
+  La légende parle d'un type ayant attrapé le sida en squattant trop bas et touchant la cuvette de ces toilettes.
 
-  En revanche pour ce qui est du nom, les anglophones appellent ça des 'French squatting toilets', je vous suggère de ranger vos clichés sur la Turquie dorénavant.",
+  En revanche pour ce qui est du nom, les anglophones appellent ça des 'French squatting toilets', on vous suggère donc de ranger vos clichés sur la Turquie.",
   address: "KFC Paris Les Halles, 31 Bd Sebastopol, 75001 Paris",
   toilet_type: "Turc",
   capacity: 12,
   gender: "Homme",
   is_noiseproof: false,
   is_pro: true,
-  user: users.sample
+  user: user2
 }
 bagne_turc = Toilet.new(bagne_turc)
 bagnepic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243668/turc_fwfiha.jpg')
@@ -107,7 +106,7 @@ paillettes = {
   gender: "Mixte",
   is_noiseproof: true,
   is_pro: false,
-  user: users.sample
+  user: user3
 }
 paillettes = Toilet.new(paillettes)
 paillettespic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243667/diams_r1lzaj.jpg')
@@ -127,7 +126,7 @@ japonaise = {
   gender: "Femme",
   is_noiseproof: true,
   is_pro: true,
-  user: users.sample
+  user: user3
 }
 japonaise = Toilet.new(japonaise)
 japonaisepic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243667/jap_x2bhzk.jpg')
@@ -147,30 +146,50 @@ underwater = {
   gender: "Mixte",
   is_noiseproof: true,
   is_pro: true,
-  user: users.sample
+  user: user1
 }
 underwater = Toilet.new(underwater)
 underwaterpic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243667/water_ccxkmx.jpg')
 underwater.photo.attach(io: underwaterpic, filename: 'underwater-image', content_type: 'image/jpg')
 underwater.save!
 
-10.times do
-  toilet = {
-    title: "Lorem Ipsum",
-    description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus ex adipisci, atque! Sunt mollitia facere, assumenda ex sequi, perspiciatis reiciendis repellendus consectetur nobis nihil expedita perferendis dolores incidunt quibusdam minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, fugit, quos. Necessitatibus, vel, velit! Ducimus saepe aliquid maiores id magnam inventore laudantium ipsam recusandae amet eaque, at nostrum labore velit.
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus ex adipisci, atque! Sunt mollitia facere, assumenda ex sequi, perspiciatis reiciendis repellendus consectetur nobis nihil expedita perferendis dolores incidunt quibusdam minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, fugit, quos. Necessitatibus, vel, velit! Ducimus saepe aliquid maiores id magnam inventore laudantium ipsam recusandae amet eaque, at nostrum labore velit.",
-    address:"#{Faker::Address.street_address}, #{Faker::Address.city}",
-    toilet_type: Toilet::TOILET_TYPES.sample,
-    capacity: rand(1..3),
-    gender: Toilet::GENDERS.sample,
-    is_noiseproof: [true, false].sample,
-    is_pro: [true, false].sample,
-    user: users.sample
-  }
-  trone = Toilet.new(toilet)
-  tronepic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574244573/toilet_rdyx94.jpg')
-  trone.photo.attach(io: tronepic, filename: 'trone-image', content_type: 'image/jpg')
-  trone.save!
-end
+rave = {
+  title: "Détox post-rave",
+  description: " Il est 14h vous quittez la rave. Vous n'avez pas encore dormi et réalisez enfin que la soirée vous a emmené à Meaux alors que vous vivez dans une petite banlieue de l'Ouest Parisien.
+
+  Hier soir c'était bières, McDo, vodka sans oublier un bon taz en arrivant dans la soirée sachant que vos mooves sur la dernière heure consistaient plus en du saut sur place que de la danse.
+
+  A mesure que vos mâchoires ainsi que votre sphyctère se relâchent vous commencez à paniquer. Oubliez le mur de brique derrière la Poste, nous avons pensé à vous ;-)",
+  address: "Rue de Trinitaires, 77100 Meaux",
+  toilet_type: "Pot",
+  capacity: 4,
+  gender: "Mixte",
+  is_noiseproof: false,
+  is_pro: false,
+  user: user1
+}
+rave = Toilet.new(rave)
+ravepic = URI.open('https://res.cloudinary.com/duzjsucze/image/upload/v1574330453/rave_toiet_xtyt0t.jpg')
+rave.photo.attach(io: ravepic, filename: 'rave-image', content_type: 'image/jpg')
+rave.save!
+
+# 10.times do
+#   toilet = {
+#     title: "Lorem Ipsum",
+#     description: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus ex adipisci, atque! Sunt mollitia facere, assumenda ex sequi, perspiciatis reiciendis repellendus consectetur nobis nihil expedita perferendis dolores incidunt quibusdam minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, fugit, quos. Necessitatibus, vel, velit! Ducimus saepe aliquid maiores id magnam inventore laudantium ipsam recusandae amet eaque, at nostrum labore velit.
+#     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus ex adipisci, atque! Sunt mollitia facere, assumenda ex sequi, perspiciatis reiciendis repellendus consectetur nobis nihil expedita perferendis dolores incidunt quibusdam minima. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti, fugit, quos. Necessitatibus, vel, velit! Ducimus saepe aliquid maiores id magnam inventore laudantium ipsam recusandae amet eaque, at nostrum labore velit.",
+#     address:"#{Faker::Address.street_address}, #{Faker::Address.city}",
+#     toilet_type: Toilet::TOILET_TYPES.sample,
+#     capacity: rand(1..3),
+#     gender: Toilet::GENDERS.sample,
+#     is_noiseproof: [true, false].sample,
+#     is_pro: [true, false].sample,
+#     user: users.sample
+#   }
+#   trone = Toilet.new(toilet)
+#   tronepic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574244573/toilet_rdyx94.jpg')
+#   trone.photo.attach(io: tronepic, filename: 'trone-image', content_type: 'image/jpg')
+#   trone.save!
+# end
 
 puts "Seeds done !"
