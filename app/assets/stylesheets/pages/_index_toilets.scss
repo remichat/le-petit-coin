@@ -1,0 +1,28 @@
+.toilets-images {
+
+  & .feature-info {
+    font-weight: bold;
+
+    & i {
+      font-size: 14px;
+    }
+  }
+
+  & .feature-tag {
+    color: white;
+    border-radius: $border-radius;
+    padding: 1px 5px;
+    background-color: $blue-caca;
+    font-weight: bold;
+    font-size: 13px;
+  }
+
+  & .stars {
+    text-align: left;
+  }
+
+  & .stars>i {
+    color: $yellow;
+    font-size: 15px;
+    }
+}

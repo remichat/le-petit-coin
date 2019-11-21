@@ -1,7 +1,9 @@
 .banner {
   background-size: cover;
   background-position: center;
-  padding: 150px 0;
+  height: calc(100vh - 90px);
+  display: flex;
+  align-items: center;
     h1 {
       margin: 0;
       color: white;
@@ -33,4 +35,18 @@
   flex-direction: column;
   justify-content: space-between;
 }
+
+.toilets-images {
+  background-repeat: no-repeat;
+  height: 70%;
+  background-size: cover;
+  background-position: center;
+  border-radius: $border-radius;
+  text-align: right;
+  padding: 15px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 
