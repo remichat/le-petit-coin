@@ -1,11 +1,7 @@
 class ToiletsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @toilets = Toilet.geocoded
-
-    if params[:query].present?
-      @toilets = @toilets.search_by_address(params[:query])
-    end
+    @toilets = Toilet.near(params[:query])
 
     @markers = @toilets.map do |toilet|
       {
