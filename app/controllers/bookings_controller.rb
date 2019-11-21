@@ -25,6 +25,15 @@ class BookingsController < ApplicationController
     change_status("Rejected")
   end
 
+  def number_of_notifications_for_user
+    user = User.find(params[:user_id])
+    number = user.bookings.reduce(0) do |memo, booking|
+      increment = booking.is_read ? 0 : 1
+      memo + increment
+    end
+    render json: { notifications: number }
+  end
+
   private
 
   def booking_params
