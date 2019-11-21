@@ -17,9 +17,24 @@ class BookingsController < ApplicationController
     redirect_to bookings_path
   end
 
+  def accept
+    change_status("Confirmed")
+  end
+
+  def reject
+    change_status("Rejected")
+  end
+
   private
 
   def booking_params
-    params.require(:booking).permit(:start_date, :end_date)
+    params.require(:booking).permit(:start_date, :end_date, :status)
+  end
+
+  def change_status(new_status)
+    @booking = Booking.find(params[:id])
+    @booking.status = new_status
+    @booking.save
+    redirect_to owner_bookings_path
   end
 end
