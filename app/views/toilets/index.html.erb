@@ -1,54 +1,62 @@
-<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://images.pexels.com/photos/127726/pexels-photo-127726.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260);">
-  <div class="container">
-    <h1 data-aos="fade-down" data-aos-duration="5000">Spread the <strong>💩</strong> around you!</h1>
-    <p data-aos="fade-down" data-aos-duration="4000"><span id="banner-typed-text"></span></p>
-    <div data-aos="fade-down" data-aos-duration="3000"><%= link_to 'Flush up', "#list-index", class: "btn btn-flat" %></div>
-  </div>
+<div class="search-bar d-flex justify-content-between px-3 py-2">
+  <p><%= @toilets.length %> résultats trouvés près de <%= params[:query].capitalize %></p>
+  <%= form_tag toilets_path, method: :get do %>
+    <div class='search-form'>
+      <div><%= text_field_tag :query, params[:query], class: "form-control",placeholder: "Entrer une adresse..." %></div>
+      <div><%= submit_tag "Découvrir", class: "btn btn btn-flat" %></div>
+    </div>
+  <% end %>
 </div>
 
 <div class="container">
 
-  <h3 id="list-index">Trouvez votre Ptit Coin</h3>
+  <div class="cards-map">
 
-  <div class="grid-cards">
-    <% @toilets.each do |toilet| %>
-      <%= link_to toilet_path(toilet) do %>
-        <div class="card-trip" data-aos="fade-up" data-aos-duration="5000">
+    <div class="grid-cards">
+      <% @toilets.each do |toilet| %>
+        <%= link_to toilet_path(toilet) do %>
+          <div class="card-trip" data-aos="fade-up" data-aos-duration="5000">
 
-          <div class="toilets-images" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url(<%= cl_image_path toilet.photo.key, alt: "alttext" %>);">
-            <div class="features">
-              <% if toilet.is_pro %>
-                <span class="feature-tag">PRO</span>
-              <% end %>
-              <% if toilet.is_noiseproof %>
-                <span class="feature-tag">NOISE-PROOF</span>
-              <% end %>
+            <div class="toilets-images" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url(<%= cl_image_path toilet.photo.key, alt: "alttext" %>);">
+              <div class="features">
+                <% if toilet.is_pro %>
+                  <span class="feature-tag">PRO</span>
+                <% end %>
+                <% if toilet.is_noiseproof %>
+                  <span class="feature-tag">NOISE-PROOF</span>
+                <% end %>
+              </div>
+
+              <div class="stars">
+                <% x = rand(3..5) %>
+                <% (x).times do %>
+                  <%= "<i class='fas fa-star'></i>".html_safe %>
+                <% end %>
+                <% (5-x).times do %>
+                  <%= "<i class='far fa-star'></i>".html_safe %>
+                <% end %>
+              </div>
             </div>
 
-            <div class="stars">
-              <% x = rand(3..5) %>
-              <% (x).times do %>
-                <%= "<i class='fas fa-star'></i>".html_safe %>
-              <% end %>
-              <% (5-x).times do %>
-                <%= "<i class='far fa-star'></i>".html_safe %>
-              <% end %>
-            </div>
-          </div>
 
-
-          <div class="card-trip-infos">
-            <div class="small">
-              <h2><%= toilet.title %></h2>
-              <p><%= toilet.description %></p>
+            <div class="card-trip-infos">
+              <div class="small">
+                <h2><%= toilet.title %></h2>
+                <p><%= toilet.description %></p>
+              </div>
             </div>
-            <h2><span class="blue-caca gender-index"><%= Toilet::GENDERS_ICONS[toilet.gender] %></span></h2>
-            <!-- <img src="https://avatars0.githubusercontent.com/u/54526334?v=4" class="card-trip-user avatar-bordered" /> -->
-            <%= cl_image_tag toilet.user.photo.key, class: 'card-trip-user avatar-bordered' %>
-          </div>
-        </div>
-      <% end %>
-    <% end %>
+          <% end %>
+        <% end %>
+      </div>
+
+      <div
+      id="map"
+      style="width: 100%;
+      height: 600px;"
+      data-markers="<%= @markers.to_json %>"
+      data-mapbox-api-key="<%= ENV['MAPBOX_API_KEY'] %>"
+      >
+    </div>
   </div>
 </div>
 

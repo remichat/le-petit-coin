@@ -1,0 +1,52 @@
+.mapboxgl-popup {
+  max-width: 400px;
+}
+
+.mapboxgl-popup-content {
+  font-family: 'Raileway', 'Helvetica', sans-serif;
+  border-radius: 10px !important;
+  a{
+      color: #444D56;
+      text-decoration: none;
+    }
+  &:hover {
+    cursor: pointer;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
+    color:#212121;
+  }
+  .img-small {
+    border-radius: 5px;
+  }
+  h5 {
+
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    max-width: 200px;
+    margin: 0;
+    font-size: 16px;
+    font-weight: bold;
+  }
+  p{
+    opacity: .7;
+    color: $mid-gray;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    max-width: 200px;
+    margin-bottom: 10px;
+    color: #444D56;
+  }
+}
+
+#map{
+  position: sticky;
+  top: 0;
+  height: 100%;
+  margin-top: 1em;
+  box-shadow: 0 0 15px rgba(0,0,0,0.2);
+  border-radius: $border-radius-lg;
+}
+
