@@ -34,3 +34,17 @@
   justify-content: space-between;
 }
 
+.toilets-images {
+  background-repeat: no-repeat;
+  height: 70%;
+  background-size: cover;
+  background-position: center;
+  border-radius: $border-radius;
+  text-align: right;
+  padding: 15px;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+
