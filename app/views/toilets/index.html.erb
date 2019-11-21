@@ -15,7 +15,7 @@
       <%= link_to toilet_path(toilet) do %>
         <div class="card-trip" data-aos="fade-up" data-aos-duration="5000">
 
-          <div class="toilet-image" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url(<%= cl_image_path toilet.photo.key, alt: "alttext" %>);">
+          <div class="toilets-images" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url(<%= cl_image_path toilet.photo.key, alt: "alttext" %>);">
             <div class="features">
               <% if toilet.is_pro %>
                 <span class="feature-tag">PRO</span>
@@ -24,6 +24,7 @@
                 <span class="feature-tag">NOISE-PROOF</span>
               <% end %>
             </div>
+
             <div class="stars">
               <% x = rand(3..5) %>
               <% (x).times do %>
