@@ -1,0 +1,7 @@
+<%= link_to toilet_path(toilet) do %>
+  <div>
+    <h5><%= toilet.title %></h5>
+    <p><%= toilet.address %></p>
+    <%= cl_image_tag toilet.photo.key, :width=>200, :height=>120, :gravity=>"auto", :crop=>"fill", class: 'img-small' %>
+  </div>
+<% end %>
