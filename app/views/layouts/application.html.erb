@@ -13,7 +13,7 @@
   <body>
     <%= render "shared/navbar" %>
     <div class="content-site">
-    <i data-user-id="<%= current_user.id %>" id="user_id"></i>
+    <i data-user-id="<%= current_user.id if user_signed_in?  %>" id="user_id"></i>
       <%= yield %>
     </div>
     <%= render 'shared/flashes' %>
