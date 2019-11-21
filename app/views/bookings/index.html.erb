@@ -10,22 +10,22 @@
               <h2 class="title"><%= booking.toilet.title %></h2>
               <div class="buttons">
                 <%= link_to booking_path(booking), method: :delete do%>
-                  <i class="fa fa-trash" aria-hidden="true"></i>
+                  <i class="fa fa-trash mb-2" aria-hidden="true"> Annuler</i>
                 <% end %>
                 <%= link_to do %>
-                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <i class="fa fa-phone" aria-hidden="true"> Contact</i>
                 <% end %>
               </div>
             </div>
+              <% if booking.status = "Pending" %>
+                <p class="pending ml-1"><%= booking.status %></p>
+              <% elsif booking.status = "Confirmed" %>
+                <p class="confirmed ml-1"><%= booking.status %></p>
+              <% else %>
+                <p class="rejected ml-1"><%= booking.status %></p>
+              <% end %>
             <div class="address-date">
               <div class="address">
-                <% if booking.status = "Pending" %>
-                  <p class="pending"><%= booking.status %></p>
-                <% elsif booking.status = "Confirmed" %>
-                  <p class="confirmed"><%= booking.status %></p>
-                <% else %>
-                  <p class="rejected"><%= booking.status %></p>
-                <% end %>
                 <p><i class="fas fa-map-marked-alt"></i> <%= booking.toilet.address %></p>
               </div>
               <p class="date">Le <%= booking.start_date.strftime(" %d/%m/%Y %H:%M ") %></p>
@@ -46,10 +46,10 @@
               <h2 class="title"><%= booking.toilet.title %></h2>
               <div class="buttons">
                 <%= link_to do%>
-                  <i class="far fa-star"></i>
+                  <i class="far fa-star mb-2"> Favoris</i>
                 <% end %>
                 <%= link_to do %>
-                  <i class="fa fa-phone" aria-hidden="true"></i>
+                  <i class="fa fa-phone" aria-hidden="true"> Contact</i>
                 <% end %>
               </div>
             </div>
