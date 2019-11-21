@@ -19,6 +19,13 @@
             </div>
             <div class="address-date">
               <div class="address">
+                <% if booking.status = "Pending" %>
+                  <p class="pending"><%= booking.status %></p>
+                <% elsif booking.status = "Confirmed" %>
+                  <p class="confirmed"><%= booking.status %></p>
+                <% else %>
+                  <p class="rejected"><%= booking.status %></p>
+                <% end %>
                 <p><i class="fas fa-map-marked-alt"></i> <%= booking.toilet.address %></p>
               </div>
               <p class="date">Le <%= booking.start_date.strftime(" %d/%m/%Y %H:%M ") %></p>

@@ -54,3 +54,15 @@
   display: flex;
   justify-content: space-between;
 }
+
+.pending {
+  color: orange;
+}
+
+.confirmed {
+  color: green;
+}
+
+.rejected {
+  color: red;
+}
