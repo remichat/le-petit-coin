@@ -14,8 +14,28 @@
     <% @toilets.each do |toilet| %>
       <%= link_to toilet_path(toilet) do %>
         <div class="card-trip" data-aos="fade-up" data-aos-duration="5000">
-          <!-- <img src="https://upload.wikimedia.org/wikipedia/commons/9/9e/French_Squatter_Toilet.jpg" /> -->
-          <%= cl_image_tag toilet.photo.key %>
+
+          <div class="toilet-image" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url(<%= cl_image_path toilet.photo.key, alt: "alttext" %>);">
+            <div class="features">
+              <% if toilet.is_pro %>
+                <span class="feature-tag">PRO</span>
+              <% end %>
+              <% if toilet.is_noiseproof %>
+                <span class="feature-tag">NOISE-PROOF</span>
+              <% end %>
+            </div>
+            <div class="stars">
+              <% x = rand(3..5) %>
+              <% (x).times do %>
+                <%= "<i class='fas fa-star'></i>".html_safe %>
+              <% end %>
+              <% (5-x).times do %>
+                <%= "<i class='far fa-star'></i>".html_safe %>
+              <% end %>
+            </div>
+          </div>
+
+
           <div class="card-trip-infos">
             <div class="small">
               <h2><%= toilet.title %></h2>
@@ -30,3 +50,4 @@
     <% end %>
   </div>
 </div>
+

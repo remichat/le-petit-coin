@@ -5,10 +5,10 @@
       <div class="toilet-cover" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url(<%= cl_image_path @toilet.photo.key, alt: "alttext" %>);">
         <div class="features">
           <% if @toilet.is_pro %>
-            <span class="feature-tag">PRO</span>
+            <span class="card-feature-tag">PRO</span>
           <% end %>
           <% if @toilet.is_noiseproof %>
-            <span class="feature-tag">NOISE-PROOF</span>
+            <span class="card-feature-tag">NOISE-PROOF</span>
           <% end %>
         </div>
         <div class="stars">
