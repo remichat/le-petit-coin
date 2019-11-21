@@ -59,7 +59,7 @@ chiure_decolo = {
   Si vous êtes ce genre de salopard capitaliste mais que votre conscience de hypster-bobo s'éveille récemment, ces toilettes sont faites pour vous!
 
   Il est grand temps de réduire l'empreinte carbone dégueulasse que vous devez à votre indécente consommation de barbaque.",
-  address: "12 rue Crespi du Gast; 75011 Paris",
+  address: "12 rue Crespin du Gast, 75011 Paris",
   toilet_type: "Sèche",
   capacity: 1,
   gender: "Mixte",
@@ -80,7 +80,7 @@ bagne_turc = {
   La légende parle d'un type ayant attrapé le sida en squattant trop bas et touchant la cuvette de ces toilettes.
 
   En revanche pour ce qui est du nom, les anglophones appellent ça des 'French squatting toilets', on vous suggère donc de ranger vos clichés sur la Turquie.",
-  address: "KFC Paris Les Halles, 31 Bd Sebastopol, 75001 Paris",
+  address: "KFC Paris Les Halles, 75001 Paris",
   toilet_type: "Turc",
   capacity: 12,
   gender: "Homme",
@@ -140,7 +140,7 @@ underwater = {
   Personellement chez le Ptit Coin, pas du tout. Mais bon, nous ne sommes pas là pour émettre des jugements de valeur sur vos délires.
 
   Quoiqu'il en soit, si vous êtes en pleine sortie plongée à la con lors de vos vacances à Bali et qu'une envie pressante vous prend, vous savez où vous rendre.",
-  address: "Klumpu, Nusapenida, Bali 80771, Indonésie",
+  address: "Klumpu, Nusapenida, 80771 Bali",
   toilet_type: "Pot",
   capacity: 500,
   gender: "Mixte",

@@ -24,19 +24,21 @@
 
 .card-product p {
   font-size: 14px;
-  line-height: 0.8;
+  line-height: 1;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
 }
 
 .title-address {
-  width: 280px;
-  padding-left: 5px;
+  width: 260px;
+  padding-left: 7px;
 
 }
 
-
+.title-address .address-style {
+  color: grey;
+}
 .dates {
   width: 200px;
 }

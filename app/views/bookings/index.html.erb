@@ -5,8 +5,10 @@
   <div class ="card-product">
   <%= cl_image_tag(booking.toilet.photo.key, width: 400, height: 300, crop: :fill) %>
       <div class="title-address">
-        <p><%= booking.toilet.title %></p>
-        <p>Adresse : <%= booking.toilet.address %></p>
+        <p><strong><%= booking.toilet.title %></strong></p>
+        <div class="address-style">
+          <p><i class="fas fa-map-marked-alt"></i> <%= booking.toilet.address %></p>
+        </div>
       </div>
       <div class="dates">
         <p>Du <%= booking.start_date.strftime(" %d/%m/%Y %H:%M ") %></p>
