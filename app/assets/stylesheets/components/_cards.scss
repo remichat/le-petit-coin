@@ -77,6 +77,14 @@
   }
 }
 
+.card-feature-tag {
+    color: white;
+    border-radius: $border-radius;
+    padding: 1px 5px;
+    background-color: $blue-caca;
+    font-weight: bold;
+}
+
 
 @media (max-width: 991px) {
   .grid-cards{
