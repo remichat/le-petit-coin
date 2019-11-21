@@ -1,12 +1,17 @@
+.container-container {
+  display: flex;
+  justify-content: space-between
+}
 .card-product {
   overflow: hidden;
-  height: 100px;
+  height: 70px;
+  width: 530px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
-  display: flex;
-  justify-content : space-between;
-  text-align: center;
   margin-bottom: 10px;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
 }
 
 .card-product img {
@@ -22,17 +27,30 @@
 }
 
 .card-product p {
-  font-size: 12px;
-  line-height: 1.4;
+  font-size: 13px;
+  line-height: 1;
   opacity: .7;
   margin-bottom: 0;
   margin-top: 8px;
 }
 
-.card-product .card-product-infos {
-  padding-right: 120px;
+.card-content {
+  width: 450px;
+  display: flex;
+  flex-direction: column;
 }
 
-.card-product .card-product-dates {
-  padding-right: 30px;
+.title-buttons {
+  width: 400px;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.address-date {
+  width: 400px;
+  padding-left: 5px;
+  display: flex;
+  justify-content: space-between;
 }

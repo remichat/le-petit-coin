@@ -8,7 +8,7 @@ user1 = {
   first_name: "Khâ",
   last_name: "Bhï-Nęt",
   phone_number: "0612345678",
-  address: "Narnii Rd, Ulaanbaatar, Mongolie",
+  address: "3 rue Jean Macé, 75011 Paris",
   email: "ca@binet.com",
   password: "azertyu",
   password_confirmation: "azertyu"
@@ -21,7 +21,7 @@ user2 = {
   first_name: "Alexei",
   last_name: "Kipetrovici",
   phone_number: "0609090807",
-  address: "Red Square, Moscow, Russie, 109012",
+  address: "3 rue du Roi Doré, 75003 Paris",
   email: "alexei@petrovite.com",
   password: "azertyu",
   password_confirmation: "azertyu"
@@ -34,7 +34,7 @@ user3 = {
   first_name: "Albert",
   last_name: "Cacamus",
   phone_number: "0687878787",
-  address: "Le Royaume",
+  address: "12 rue Crespin du Gast, 75011 Paris",
   email: "caca@mou.com",
   password: "azertyu",
   password_confirmation: "azertyu"
@@ -43,10 +43,12 @@ user3 = User.new(user3)
 user3pic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574244761/had_tidvnc.png')
 user3.photo.attach(io: user3pic, filename: 'user3-avatar', content_type: 'image/jpg')
 user3.save!
+
 puts "Users created !"
 chiure_decolo = {
   title: "Chiure d'écolo",
   description: "Les meilleures chiottes pour ceux qui ont un potager! Tout ce qui entre là-dedans est transformé en compost.
+
   Si vous êtes ce genre de salopard capitaliste mais que votre conscience de hypster-bobo s'éveille récemment, ces toilettes sont faites pour vous!
   Il est grand temps de réduire l'empreinte carbone dégueulasse que vous devez à votre indécente consommation de barbaque.",
   address: "12 rue Crespin du Gast, 75011 Paris",
@@ -65,9 +67,11 @@ bagne_turc = {
   title: "Le Bagne Turc",
   description: "Avez-vous déjà expérimenté les prisons d'Erdogan ? Vous en serez probablement dissuadés en sortant de cette expérience.
   Les habitués vous recommanderont d'emporter un surin avec vous.
+
   La légende parle d'un type ayant attrapé le sida en squattant trop bas et touchant la cuvette de ces toilettes.
+
   En revanche pour ce qui est du nom, les anglophones appellent ça des 'French squatting toilets', on vous suggère donc de ranger vos clichés sur la Turquie.",
-  address: "KFC Paris Les Halles, 75001 Paris",
+  address: "35 Boulevard de Sébastopol, 75001 Paris",
   toilet_type: "Turc",
   capacity: 12,
   gender: "Homme",
@@ -118,7 +122,7 @@ underwater = {
   description: "Vous êtes-vous déjà senti l'âme d'un romantique et pris d'une envie de revivre les derniers instants du Titanic ?
   Personellement chez le Ptit Coin, pas du tout. Mais bon, nous ne sommes pas là pour émettre des jugements de valeur sur vos délires.
   Quoiqu'il en soit, si vous êtes en pleine sortie plongée à la con lors de vos vacances à Bali et qu'une envie pressante vous prend, vous savez où vous rendre.",
-  address: "Klumpu, Nusapenida, 80771 Bali",
+  address: "17 Quai de la Tournelle, 75005 Paris",
   toilet_type: "Pot",
   capacity: 500,
   gender: "Mixte",
@@ -133,9 +137,11 @@ underwater.save!
 rave = {
   title: "Détox post-rave",
   description: " Il est 14h vous quittez la rave. Vous n'avez pas encore dormi et réalisez enfin que la soirée vous a emmené à Meaux alors que vous vivez dans une petite banlieue de l'Ouest Parisien.
+
   Hier soir c'était bières, McDo, vodka sans oublier un bon taz en arrivant dans la soirée sachant que vos mooves sur la dernière heure consistaient plus en du saut sur place que de la danse.
+
   A mesure que vos mâchoires ainsi que votre sphyctère se relâchent vous commencez à paniquer. Oubliez le mur de brique derrière la Poste, nous avons pensé à vous ;-)",
-  address: "Rue de Trinitaires, 77100 Meaux",
+  address: "2 Rue de Condé, 77100 Meaux",
   toilet_type: "Pot",
   capacity: 4,
   gender: "Mixte",
@@ -147,6 +153,7 @@ rave = Toilet.new(rave)
 ravepic = URI.open('https://res.cloudinary.com/duzjsucze/image/upload/v1574330453/rave_toiet_xtyt0t.jpg')
 rave.photo.attach(io: ravepic, filename: 'rave-image', content_type: 'image/jpg')
 rave.save!
+
 # 10.times do
 #   toilet = {
 #     title: "Lorem Ipsum",
@@ -165,4 +172,5 @@ rave.save!
 #   trone.photo.attach(io: tronepic, filename: 'trone-image', content_type: 'image/jpg')
 #   trone.save!
 # end
+
 puts "Seeds done !"
