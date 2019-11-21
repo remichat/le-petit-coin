@@ -1,16 +1,18 @@
-
 <div class="container w-80">
   <div class="row p-4">
+
     <div class="col-8 toilet-main-infos">
+
       <div class="toilet-cover" style="background-image: linear-gradient(rgba(0,0,0,0.1),rgba(0,0,0,0.3)), url(<%= cl_image_path @toilet.photo.key, alt: "alttext" %>);">
         <div class="features">
           <% if @toilet.is_pro %>
-            <span class="feature-tag">PRO</span>
+            <span class="card-feature-tag">PRO</span>
           <% end %>
           <% if @toilet.is_noiseproof %>
-            <span class="feature-tag">NOISE-PROOF</span>
+            <span class="card-feature-tag">NOISE-PROOF</span>
           <% end %>
         </div>
+
         <div class="stars">
           <% x = rand(3..5) %>
           <% (x).times do %>
@@ -20,7 +22,9 @@
             <%= "<i class='far fa-star'></i>".html_safe %>
           <% end %>
         </div>
+
       </div>
+
       <div class="d-flex justify-content-between pt-3">
         <div>
           <h1 class="title-toilet"><%= @toilet.title %></h1>
