@@ -4,6 +4,7 @@ class Owner::BookingsController < ApplicationController
     @bookings = find_bookings_from_toilet(toilets).reverse
     render :index
     @bookings.map { |booking| booking.update(is_read: true) }
+    @page_title = "owner_index"
   end
 
   def find_bookings_from_toilet(toilets)
