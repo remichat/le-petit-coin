@@ -6,7 +6,7 @@
         <div class ="card-product">
           <%= cl_image_tag(booking.toilet.photo.key, width: 400, height: 300, crop: :fill) %>
           <div class="card-content">
-            <div class="title-buttons">
+            <div class="title-buttons-bookings-to-come">
               <h2 class="title"><%= booking.toilet.title %></h2>
               <div class="buttons">
                 <%= link_to booking_path(booking), method: :delete do%>
@@ -42,7 +42,7 @@
         <div class ="card-product">
           <%= cl_image_tag(booking.toilet.photo.key, width: 400, height: 300, crop: :fill) %>
           <div class="card-content">
-            <div class="title-buttons">
+            <div class="title-buttons-passed-bookings">
               <h2 class="title"><%= booking.toilet.title %></h2>
               <div class="buttons">
                 <%= link_to do%>

@@ -21,13 +21,13 @@
 }
 
 .card-product h2 {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product p {
-  font-size: 14px;
+  font-size: 13px;
   line-height: 1;
   opacity: .7;
   margin-bottom: 0;
@@ -39,11 +39,19 @@
   width: 470px;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly
+  justify-content: space-between;
 }
 
-.title-buttons {
-  width: 350px;
+.title-buttons-bookings-to-come {
+  width: 375px;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title-buttons-passed-bookings {
+  width: 375px;
   padding-left: 5px;
   display: flex;
   flex-direction: row;
@@ -53,7 +61,6 @@
 .buttons {
   display: flex;
   flex-direction: column;
-  font-family: verdana;
 }
 
 .address-date {
