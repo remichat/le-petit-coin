@@ -20,6 +20,12 @@ class ToiletsController < ApplicationController
   def show
     @toilet = Toilet.find(params[:id])
     @booking = Booking.new
+    @markers =
+      [{
+        lat: @toilet.latitude,
+        lng: @toilet.longitude,
+        infoWindow: render_to_string(partial: "shared/info_window", locals: { toilet: @toilet })
+      }]
   end
 
   def create
