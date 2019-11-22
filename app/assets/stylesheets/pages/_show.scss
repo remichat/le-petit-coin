@@ -8,6 +8,9 @@
   & i {
     color: $blue-caca;
     font-size: 24px;
+    &.fa-venus {
+      color: $red;
+    }
   }
 
   & ul {
@@ -47,4 +50,8 @@
   & .stars>i {
     color: $yellow;
   }
+}
+
+.container-show {
+  padding: 0 200px;
 }

@@ -54,6 +54,8 @@
   flex-grow: 1;
   margin-bottom: 50px;
   margin: 10px;
+  max-height: calc(100vh - 90px - 58px);
+  overflow: scroll;
     a{
       color: #444D56;
       text-decoration: none;
@@ -75,6 +77,14 @@
     font-size: 20px;
     padding-right: 7px;
   }
+
+  & i {
+    color: $blue-caca;
+    &.fa-venus {
+      color: $red;
+    }
+  }
+
 }
 
 .card-feature-tag {
@@ -105,4 +115,9 @@
   #map{
     display: none;
   }
+}
+
+
+::-webkit-scrollbar {
+    display: none;
 }

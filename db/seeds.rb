@@ -167,6 +167,7 @@ douche = {
   is_pro: false,
   user: user2
 }
+
 douche = Toilet.new(douche)
 douchepic = URI.open('https://res.cloudinary.com/duzjsucze/image/upload/v1574431303/photo-1563204719-44395a035bb6_tcmgb7.jpg')
 douche.photo.attach(io: douchepic, filename: 'douche-image', content_type: 'image/jpg')
@@ -184,6 +185,7 @@ urinoir = {
   is_pro: true,
   user: user2
 }
+
 urinoir = Toilet.new(urinoir)
 urinoirpic = URI.open('https://res.cloudinary.com/duzjsucze/image/upload/v1574431303/photo-1572962207482-745e51c5117e_hjkear.jpg')
 urinoir.photo.attach(io: urinoirpic, filename: 'urinoir-image', content_type: 'image/jpg')
