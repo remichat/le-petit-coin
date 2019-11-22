@@ -88,7 +88,7 @@ paillettes = {
   description: "Paraît-il que c'est sur ce trône qu'Inès Reg a eu l'inspiration de la dite punchline.
   Comme quoi faire le buzz, ça n'a pas de secret : il suffit juste de s'accorder des moments de réfléxion sur des chiottes qui déchirent!
   Libre à vous de considérer si ça vaut la peine d'investir massivement dans des chiottes indécentes pour y avoir des moments de réflexion intenses et déboucher sur des idées de merde.",
-  address: "53 Boulevard Murat, 75016 Paris",
+  address: "147 rue Oberkampf, 75011 Paris",
   toilet_type: "Pot",
   capacity: 2,
   gender: "Mixte",
