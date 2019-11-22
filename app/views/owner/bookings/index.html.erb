@@ -15,6 +15,9 @@
       <p>From <%= booking.start_date.strftime(" %d/%m/%Y %H:%M ") %></p>
       <p>To <%= booking.end_date.strftime(" %d/%m/%Y %H:%M ") %></p>
     </div>
+    <% if !booking.is_read %>
+      <i class="fas fa-circle badge-dot"></i>
+    <% end %>
   </div>
 <% end %>
 </div>

@@ -1,0 +1,26 @@
+.notifications {
+  position: relative;
+}
+
+.badge-icon {
+  color: white;
+  position: absolute;
+  top: 2px;
+  right: -7px;
+  background-color: $red;
+  border-radius: 50%;
+  padding-right: 5px;
+  padding-bottom: 4px;
+  padding-left: 5px;
+  line-height: 1;
+  font-size: 70%;
+  font-weight: bold;
+}
+
+.badge-dot {
+  right: 4px;
+  top: 5px;
+  color: #EF476F;
+  position: absolute;
+  font-size: 7px;
+}

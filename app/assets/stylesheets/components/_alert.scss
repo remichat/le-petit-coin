@@ -1,6 +1,20 @@
 .alert {
   position: fixed;
-  bottom: 16px;
-  right: 16px;
+  bottom: 80px;
+  right: 50px;
   z-index: 1000;
+  background-color: $red;
+  border-radius: $border-radius;
+  padding: 10px 15px;
+  color: white;
+
+  i {
+    color: white;
+    font-size: 16px;
+    padding-left: 5px;
+
+    &:hover {
+      color: white;
+    }
+  }
 }
