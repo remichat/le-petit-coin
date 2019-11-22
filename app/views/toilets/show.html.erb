@@ -55,7 +55,7 @@
     <div class="col-4">
       <div class="bookingf">
         <div class="form-wrapper" style="width: 100%; margin: 0 auto;">
-          <h2>A quelle heure?</h2>
+          <h2>Aujourd'hui, à quelle heure?</h2>
           <%= simple_form_for [@toilet, @booking] do |f| %>
             <%= f.input :start_date, as: :string, required: false, input_html: {class: "datepicker"}, label: "Début", placeholder: "#{Date.today}" %>
             <%= f.input :end_date, as: :string, required: false, input_html: {class: "datepicker"}, label: "Fin", placeholder: "#{Date.today}"  %>

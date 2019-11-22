@@ -33,7 +33,7 @@ class BookingsController < ApplicationController
   end
 
   def number_of_notifications_for_user
-    user = User.find(params[:user_id])
+    user = current_user
     bookings = find_bookings_from_toilet(user.toilets)
     number = bookings.reduce(0) do |memo, booking|
       increment = booking.is_read ? 0 : 1
