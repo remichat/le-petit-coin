@@ -156,7 +156,9 @@ rave.save!
 
 douche = {
   title: "Plus de papier",
-  description: "La cuvette de ces toilettes se trouve directement sous la douche. Alors si vous êtes du genre ecolo ou effet papier de verre quand vous vous essuyez, vous savez quoi faire!",
+  description: "La cuvette de ces toilettes se trouve directement sous la douche.
+
+  Alors si vous êtes du genre ecolo ou effet papier de verre quand vous vous essuyez, vous savez quoi faire!",
   address: "75010 Paris",
   toilet_type: "Pot",
   capacity: 2,
@@ -171,8 +173,9 @@ douche.photo.attach(io: douchepic, filename: 'douche-image', content_type: 'imag
 douche.save!
 
 urinoir = {
-  title: "Vise plus droit",
-  description: "Votre meilleur allié après 5 ou 6 pintes de blonde. Attention la pastille bleue dans la cuvette n'est pas un bonbon à la menthe.",
+  title: "Vise pas droit",
+  description: "Votre meilleur allié après 5 ou 6 pintes de blonde.
+  Attention la pastille bleue dans la cuvette n'est pas un bonbon à la menthe.",
   address: "75011 Paris",
   toilet_type: "Turc",
   capacity: 4,
@@ -206,7 +209,7 @@ pink = {
   title: "Hello Kitty",
   description: "Allez, un peu de tendresse dans ce monde de brutes...
   Plus sérieusement, vous trouvez pas ça hyper flippant ces chiottes !?",
-  address: "750012 Paris",
+  address: "75009 Paris",
   toilet_type: "Pot",
   capacity: 1,
   gender: "Mixte",
