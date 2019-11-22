@@ -57,7 +57,7 @@ chiure_decolo = {
   gender: "Mixte",
   is_noiseproof: true,
   is_pro: false,
-  user: user2
+  user: user1
 }
 chiure_decolo = Toilet.new(chiure_decolo)
 chiurepic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243667/nature_cklrxy.jpg')
@@ -77,7 +77,7 @@ bagne_turc = {
   gender: "Homme",
   is_noiseproof: false,
   is_pro: true,
-  user: user2
+  user: user1
 }
 bagne_turc = Toilet.new(bagne_turc)
 bagnepic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243668/turc_fwfiha.jpg')
@@ -128,7 +128,7 @@ underwater = {
   gender: "Mixte",
   is_noiseproof: true,
   is_pro: true,
-  user: user1
+  user: user2
 }
 underwater = Toilet.new(underwater)
 underwaterpic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v1574243667/water_ccxkmx.jpg')
@@ -141,13 +141,13 @@ rave = {
   Hier soir c'était bières, McDo, vodka sans oublier un bon taz en arrivant dans la soirée sachant que vos mooves sur la dernière heure consistaient plus en du saut sur place que de la danse.
 
   A mesure que vos mâchoires ainsi que votre sphyctère se relâchent vous commencez à paniquer. Oubliez le mur de brique derrière la Poste, nous avons pensé à vous ;-)",
-  address: "67 Rue Saint-Maur, 75011 Paris",
+  address: "9 rue Crespin du Gast, 75011 Paris",
   toilet_type: "Pot",
   capacity: 4,
   gender: "Mixte",
   is_noiseproof: false,
   is_pro: false,
-  user: user1
+  user: user2
 }
 rave = Toilet.new(rave)
 ravepic = URI.open('https://res.cloudinary.com/duzjsucze/image/upload/v1574330453/rave_toiet_xtyt0t.jpg')
