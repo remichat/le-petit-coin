@@ -1,7 +1,7 @@
 class ToiletsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @toilets = Toilet.near(params[:query])
+    @toilets = Toilet.near(params[:query]).where.not(user: current_user)
 
     @markers = @toilets.map do |toilet|
       {

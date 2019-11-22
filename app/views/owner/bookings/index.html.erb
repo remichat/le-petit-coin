@@ -1,20 +1,75 @@
-<div class="container">
-<h5>Bookings à venir</h5>
-<% @bookings.each do |booking| %>
-  <div class ="card-product">
-  <%= cl_image_tag(booking.toilet.photo.key, width: 400, height: 300, crop: :fill) %>
-    <div class="card-product-infos">
-      <p><%= booking.toilet.title %></p>
-      <p>Location : <%= booking.toilet.address %></p>
-      <%= booking.id %>
-      <%= booking.status %>
-      <%= link_to "accept", accept_booking_path(booking),method: :patch %>
-      <%= link_to "reject", reject_booking_path(booking),method: :patch %>
-    </div>
-    <div class="card-product-dates">
-      <p>From <%= booking.start_date.strftime(" %d/%m/%Y %H:%M ") %></p>
-      <p>To <%= booking.end_date.strftime(" %d/%m/%Y %H:%M ") %></p>
-    </div>
+<div class="container container-container">
+  <div class="upcoming-booking-container mt-3">
+    <h5>Demandes en cours</h5>
+    <% @bookings.each do |booking| %>
+      <% if booking.status == "Pending" %>
+        <div class ="card-product">
+          <%= cl_image_tag(booking.toilet.photo.key, width: 400, height: 300, crop: :fill) %>
+          <div class="card-content">
+            <div class="title-buttons-bookings-to-come">
+              <h2 class="title"><%= booking.toilet.title %></h2>
+              <div class="buttons">
+                <%= link_to accept_booking_path(booking), method: :patch do%>
+                <i class="far fa-star mb-1" aria-hidden="true"> Accepter</i>
+                <% end %>
+                <%= link_to reject_booking_path(booking), method: :patch do%>
+                <i class="fa fa-trash mb-1" aria-hidden="true"> Refuser</i>
+                <% end %>
+              </div>
+            </div>
+            <% if booking.status == "Rejected" %>
+              <p class="rejected ml-1"><%= booking.status %></p>
+            <% elsif booking.status == "Confirmed" %>
+              <p class="confirmed ml-1"><%= booking.status %></p>
+            <% else %>
+              <p class="pending ml-1"><%= booking.status %></p>
+            <% end %>
+            <div class="address-date">
+              <div class="address">
+                <p><i class="fas fa-map-marked-alt"></i> <%= booking.toilet.address %></p>
+              </div>
+              <p class="date">Le <%= booking.start_date.strftime(" %d/%m/%Y %H:%M ") %></p>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
   </div>
-<% end %>
+  <div class="passed-booking-container mt-3">
+    <h5>Bookings</h5>
+    <% @bookings.each do |booking| %>
+      <% if booking.status == "Confirmed" %>
+        <div class ="card-product">
+          <%= cl_image_tag(booking.toilet.photo.key, width: 400, height: 300, crop: :fill) %>
+          <div class="card-content">
+            <div class="title-buttons-passed-bookings">
+              <h2 class="title"><%= booking.toilet.title %></h2>
+              <div class="buttons">
+                <%= link_to do%>
+                  <i class="far fa-star mb-1"> Favoris</i>
+                <% end %>
+                <%= link_to do %>
+                  <i class="fa fa-phone" aria-hidden="true"> Contact</i>
+                <% end %>
+              </div>
+            </div>
+            <% if booking.status == "Rejected" %>
+              <p class="rejected ml-1"><%= booking.status %></p>
+            <% elsif booking.status == "Confirmed" %>
+              <p class="confirmed ml-1"><%= booking.status %></p>
+            <% else %>
+              <p class="pending ml-1"><%= booking.status %></p>
+            <% end %>
+            <div class="address-date">
+              <p class="address"><i class="fas fa-map-marked-alt"></i> <%= booking.toilet.address %></p>
+              <p class="date">Le <%= booking.start_date.strftime(" %d/%m/%Y %H:%M ") %></p>
+            </div>
+            <% if !booking.is_read %>
+              <i class="fas fa-circle badge-dot"></i>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+  </div>
 </div>
