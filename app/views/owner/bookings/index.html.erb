@@ -64,6 +64,9 @@
               <p class="address"><i class="fas fa-map-marked-alt"></i> <%= booking.toilet.address %></p>
               <p class="date">Le <%= booking.start_date.strftime(" %d/%m/%Y %H:%M ") %></p>
             </div>
+            <% if !booking.is_read %>
+              <i class="fas fa-circle badge-dot"></i>
+            <% end %>
           </div>
         </div>
       <% end %>
