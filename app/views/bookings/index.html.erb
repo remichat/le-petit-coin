@@ -17,13 +17,13 @@
                 <% end %>
               </div>
             </div>
-              <% if booking.status = "Pending" %>
-                <p class="pending ml-1"><%= booking.status %></p>
-              <% elsif booking.status = "Confirmed" %>
-                <p class="confirmed ml-1"><%= booking.status %></p>
-              <% else %>
-                <p class="rejected ml-1"><%= booking.status %></p>
-              <% end %>
+            <% if booking.status = "Pending" %>
+              <p class="pending ml-1"><%= booking.status %></p>
+            <% elsif booking.status = "Confirmed" %>
+              <p class="confirmed ml-1"><%= booking.status %></p>
+            <% else %>
+              <p class="rejected ml-1"><%= booking.status %></p>
+            <% end %>
             <div class="address-date">
               <div class="address">
                 <p><i class="fas fa-map-marked-alt"></i> <%= booking.toilet.address %></p>
