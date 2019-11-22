@@ -1,8 +1,8 @@
 <div class="container container-container">
   <div class="upcoming-booking-container mt-3">
-    <h5>Bookings à venir</h5>
+    <h5>Demandes en cours</h5>
     <% @bookings.each do |booking| %>
-      <% if booking.end_date > Time.now %>
+      <% if booking.status == "Pending" %>
         <div class ="card-product">
           <%= cl_image_tag(booking.toilet.photo.key, width: 400, height: 300, crop: :fill) %>
           <div class="card-content">
@@ -36,9 +36,9 @@
     <% end %>
   </div>
   <div class="passed-booking-container mt-3">
-    <h5>Bookings terminés</h5>
+    <h5>Bookings</h5>
     <% @bookings.each do |booking| %>
-      <% if booking.end_date < Time.now %>
+      <% if booking.status == "Confirmed" %>
         <div class ="card-product">
           <%= cl_image_tag(booking.toilet.photo.key, width: 400, height: 300, crop: :fill) %>
           <div class="card-content">
