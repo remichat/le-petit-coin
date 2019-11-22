@@ -154,6 +154,71 @@ ravepic = URI.open('https://res.cloudinary.com/duzjsucze/image/upload/v157433045
 rave.photo.attach(io: ravepic, filename: 'rave-image', content_type: 'image/jpg')
 rave.save!
 
+douche = {
+  title: "Plus de papier",
+  description: "La cuvette de ces toilettes se trouve directement sous la douche. Alors si vous êtes du genre ecolo ou effet papier de verre quand vous vous essuyez, vous savez quoi faire!",
+  address: "75010 Paris",
+  toilet_type: "Pot",
+  capacity: 2,
+  gender: "Mixte",
+  is_noiseproof: true,
+  is_pro: false,
+  user: user2
+}
+douche = Toilet.new(douche)
+douchepic = URI.open('https://res.cloudinary.com/duzjsucze/image/upload/v1574431303/photo-1563204719-44395a035bb6_tcmgb7.jpg')
+douche.photo.attach(io: douchepic, filename: 'douche-image', content_type: 'image/jpg')
+douche.save!
+
+urinoir = {
+  title: "Vise plus droit",
+  description: "Votre meilleur allié après 5 ou 6 pintes de blonde. Attention la pastille bleue dans la cuvette n'est pas un bonbon à la menthe.",
+  address: "75011 Paris",
+  toilet_type: "Turc",
+  capacity: 4,
+  gender: "Homme",
+  is_noiseproof: false,
+  is_pro: true,
+  user: user2
+}
+urinoir = Toilet.new(urinoir)
+urinoirpic = URI.open('https://res.cloudinary.com/duzjsucze/image/upload/v1574431303/photo-1572962207482-745e51c5117e_hjkear.jpg')
+urinoir.photo.attach(io: urinoirpic, filename: 'urinoir-image', content_type: 'image/jpg')
+urinoir.save!
+
+occupe = {
+  title: "OCCUPÉ!",
+  description: "Barre-toi putain tu fais chier!!!",
+  address: "75009 Paris",
+  toilet_type: "Pot",
+  capacity: 1,
+  gender: "Mixte",
+  is_noiseproof: false,
+  is_pro: false,
+  user: user3
+}
+occupe = Toilet.new(occupe)
+occupepic = URI.open('https://res.cloudinary.com/duzjsucze/image/upload/v1574431303/photo-1517385846632-80596fa3ae4a_o9qkm4.jpg')
+occupe.photo.attach(io: occupepic, filename: 'occupe-image', content_type: 'image/jpg')
+occupe.save!
+
+pink = {
+  title: "Hello Kitty",
+  description: "Allez, un peu de tendresse dans ce monde de brutes...
+  Plus sérieusement, vous trouvez pas ça hyper flippant ces chiottes !?",
+  address: "750012 Paris",
+  toilet_type: "Pot",
+  capacity: 1,
+  gender: "Mixte",
+  is_noiseproof: true,
+  is_pro: false,
+  user: user3
+}
+pink = Toilet.new(pink)
+pinkpic = URI.open('https://res.cloudinary.com/duzjsucze/image/upload/v1574431303/photo-1556228149-d8f523f77b5a_xjrjpz.jpg')
+pink.photo.attach(io: pinkpic, filename: 'pink-image', content_type: 'image/jpg')
+pink.save!
+
 # 10.times do
 #   toilet = {
 #     title: "Lorem Ipsum",
