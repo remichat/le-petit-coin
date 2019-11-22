@@ -19,6 +19,13 @@
             </div>
             <div class="address-date">
               <div class="address">
+                <% if booking.status = "Pending" %>
+                  <p class="pending"><%= booking.status %></p>
+                <% elsif booking.status = "Confirmed" %>
+                  <p class="confirmed"><%= booking.status %></p>
+                <% else %>
+                  <p class="rejected"><%= booking.status %></p>
+                <% end %>
                 <p><i class="fas fa-map-marked-alt"></i> <%= booking.toilet.address %></p>
               </div>
               <p class="date">Le <%= booking.start_date.strftime(" %d/%m/%Y %H:%M ") %></p>
@@ -38,7 +45,7 @@
             <div class="title-buttons">
               <h2 class="title"><%= booking.toilet.title %></h2>
               <div class="buttons">
-                <%= link_to booking_path(booking), method: :delete do%>
+                <%= link_to do%>
                   <i class="far fa-star"></i>
                 <% end %>
                 <%= link_to do %>
