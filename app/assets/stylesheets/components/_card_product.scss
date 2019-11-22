@@ -4,12 +4,12 @@
 }
 .card-product {
   overflow: hidden;
-  height: 70px;
-  width: 530px;
+  height: 110px;
+  width: 540px;
   background: white;
   box-shadow: 0 0 15px rgba(0,0,0,0.2);
   margin-bottom: 10px;
-  border-radius: 4px;
+  border-radius: 7px;
   display: flex;
   align-items: center;
 }
@@ -21,13 +21,13 @@
 }
 
 .card-product h2 {
-  font-size: 16px;
+  font-size: 20px;
   font-weight: bold;
   margin: 0;
 }
 
 .card-product p {
-  font-size: 13px;
+  font-size: 12px;
   line-height: 1;
   opacity: .7;
   margin-bottom: 0;
@@ -35,17 +35,32 @@
 }
 
 .card-content {
-  width: 450px;
+  height: 90px;
+  width: 470px;
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
 }
 
-.title-buttons {
-  width: 400px;
+.title-buttons-bookings-to-come {
+  width: 375px;
   padding-left: 5px;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+}
+
+.title-buttons-passed-bookings {
+  width: 375px;
+  padding-left: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
 }
 
 .address-date {

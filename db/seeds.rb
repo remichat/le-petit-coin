@@ -105,7 +105,7 @@ japonaise = {
   description: " Vous avez abusé des gyozas hier soir ?
   Ce bijou vous indiquera même le poids de votre git push. Allez-y, asseyez-vous, fermez les yeux et laissez-vous transporter au Nihon-koku.
   Et on dit merci qui ? Merci Jacquie & -euh non c'est peut-être parti un peu trop loin.",
-  address: "37 rue Saint-Anne, 75001 Paris",
+  address: "140 Av. des Champs-Élysées, 75008 Paris",
   toilet_type: "Pot",
   capacity: 1,
   gender: "Femme",
@@ -135,13 +135,13 @@ underwaterpic = URI.open('https://res.cloudinary.com/db2r8xix2/image/upload/v157
 underwater.photo.attach(io: underwaterpic, filename: 'underwater-image', content_type: 'image/jpg')
 underwater.save!
 rave = {
-  title: "Détox post-rave",
-  description: " Il est 14h vous quittez la rave. Vous n'avez pas encore dormi et réalisez enfin que la soirée vous a emmené à Meaux alors que vous vivez dans une petite banlieue de l'Ouest Parisien.
+  title: "Délice post-rave",
+  description: " Il est 14h vous quittez la rave. Vous n'avez pas encore dormi et réalisez enfin que la soirée vous a emmené au Nord-Est de Paris tandis que vous vivez dans une petite banlieue de l'Ouest.
 
   Hier soir c'était bières, McDo, vodka sans oublier un bon taz en arrivant dans la soirée sachant que vos mooves sur la dernière heure consistaient plus en du saut sur place que de la danse.
 
   A mesure que vos mâchoires ainsi que votre sphyctère se relâchent vous commencez à paniquer. Oubliez le mur de brique derrière la Poste, nous avons pensé à vous ;-)",
-  address: "2 Rue de Condé, 77100 Meaux",
+  address: "18 Rue du Faubourg du Temple, 75011 Paris",
   toilet_type: "Pot",
   capacity: 4,
   gender: "Mixte",
