@@ -71,7 +71,7 @@ bagne_turc = {
   La légende parle d'un type ayant attrapé le sida en squattant trop bas et touchant la cuvette de ces toilettes.
 
   En revanche pour ce qui est du nom, les anglophones appellent ça des 'French squatting toilets', on vous suggère donc de ranger vos clichés sur la Turquie.",
-  address: "35 Boulevard de Sébastopol, 75001 Paris",
+  address: "143 Boulevard de Ménilmontant, 75011 Paris",
   toilet_type: "Turc",
   capacity: 12,
   gender: "Homme",
@@ -105,7 +105,7 @@ japonaise = {
   description: " Vous avez abusé des gyozas hier soir ?
   Ce bijou vous indiquera même le poids de votre git push. Allez-y, asseyez-vous, fermez les yeux et laissez-vous transporter au Nihon-koku.
   Et on dit merci qui ? Merci Jacquie & -euh non c'est peut-être parti un peu trop loin.",
-  address: "140 Av. des Champs-Élysées, 75008 Paris",
+  address: "61 Rue Jean-Pierre Timbaud, 75011 Paris",
   toilet_type: "Pot",
   capacity: 1,
   gender: "Femme",
@@ -122,7 +122,7 @@ underwater = {
   description: "Vous êtes-vous déjà senti l'âme d'un romantique et pris d'une envie de revivre les derniers instants du Titanic ?
   Personellement chez le Ptit Coin, pas du tout. Mais bon, nous ne sommes pas là pour émettre des jugements de valeur sur vos délires.
   Quoiqu'il en soit, si vous êtes en pleine sortie plongée à la con lors de vos vacances à Bali et qu'une envie pressante vous prend, vous savez où vous rendre.",
-  address: "17 Quai de la Tournelle, 75005 Paris",
+  address: "95 Rue Oberkampf, 75011 Paris",
   toilet_type: "Pot",
   capacity: 500,
   gender: "Mixte",
@@ -141,7 +141,7 @@ rave = {
   Hier soir c'était bières, McDo, vodka sans oublier un bon taz en arrivant dans la soirée sachant que vos mooves sur la dernière heure consistaient plus en du saut sur place que de la danse.
 
   A mesure que vos mâchoires ainsi que votre sphyctère se relâchent vous commencez à paniquer. Oubliez le mur de brique derrière la Poste, nous avons pensé à vous ;-)",
-  address: "18 Rue du Faubourg du Temple, 75011 Paris",
+  address: "67 Rue Saint-Maur, 75011 Paris",
   toilet_type: "Pot",
   capacity: 4,
   gender: "Mixte",
@@ -159,7 +159,7 @@ douche = {
   description: "La cuvette de ces toilettes se trouve directement sous la douche.
 
   Alors si vous êtes du genre ecolo ou effet papier de verre quand vous vous essuyez, vous savez quoi faire!",
-  address: "75010 Paris",
+  address: "79 Avenue de la République, 75011 Paris",
   toilet_type: "Pot",
   capacity: 2,
   gender: "Mixte",
@@ -176,7 +176,7 @@ urinoir = {
   title: "Vise pas droit",
   description: "Votre meilleur allié après 5 ou 6 pintes de blonde.
   Attention la pastille bleue dans la cuvette n'est pas un bonbon à la menthe.",
-  address: "75011 Paris",
+  address: "123 Rue Oberkampf, 75011 Paris",
   toilet_type: "Turc",
   capacity: 4,
   gender: "Homme",
@@ -192,7 +192,7 @@ urinoir.save!
 occupe = {
   title: "OCCUPÉ!",
   description: "Barre-toi putain tu fais chier!!!",
-  address: "75009 Paris",
+  address: "3 Boulevard de Ménilmontant, 75020 Paris",
   toilet_type: "Pot",
   capacity: 1,
   gender: "Mixte",
@@ -209,7 +209,7 @@ pink = {
   title: "Hello Kitty",
   description: "Allez, un peu de tendresse dans ce monde de brutes...
   Plus sérieusement, vous trouvez pas ça hyper flippant ces chiottes !?",
-  address: "75009 Paris",
+  address: "21-25 Rue de Ménilmontant, 75020 Paris",
   toilet_type: "Pot",
   capacity: 1,
   gender: "Mixte",
