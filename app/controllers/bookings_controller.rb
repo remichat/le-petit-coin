@@ -1,5 +1,6 @@
 class BookingsController < ApplicationController
   def index
+    @page_title = "booking_index"
     @bookings = Booking.where(user: current_user)
   end
 

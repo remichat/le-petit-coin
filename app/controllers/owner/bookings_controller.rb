@@ -3,6 +3,7 @@ class Owner::BookingsController < ApplicationController
     toilets = Toilet.where(user: current_user)
     @bookings = find_bookings_from_toilet(toilets)
     @bookings.map { |booking| booking.update(is_read: true) }
+    @page_title = "owner_index"
   end
 
   def find_bookings_from_toilet(toilets)

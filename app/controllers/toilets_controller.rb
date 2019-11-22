@@ -14,6 +14,7 @@ class ToiletsController < ApplicationController
 
   def new
     @toilet = Toilet.new
+    @page_title = "toilet_new"
   end
 
   def show
